@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+img {
+    filter: grayscale(80%);
+    width: 50%;
+}
+
+
+
+
+.icon-contacto:hover{
+    cursor: pointer;
+}
+
+
+
+#_logo {
+    color: rgba(255, 166, 0, 0.849);
+}
+
+
+
+.col-dcha {
+    clip-path: polygon(100% 0, 0 50%, 0 0);
+    background-color: rgba(127, 255, 212, 0.356);
+ width: 50%;
+ height: 157px;
+}
+
+
+.col-izq {
+    clip-path: polygon(0 0, 100% 50%, 100% 0);
+    background-color: rgba(0, 255, 255, 0.205);
+    width: 50%;
+    height: 157px;
+   
+}
+
+.barrapoligono {
+    clip-path: polygon(100% 0, 100% 50%, 50% 0, 0 50%, 0 0);
+    background-color: rgba(0, 0, 0, 0.185);
+    width: 100%;
+    height: 7rem;
+}
