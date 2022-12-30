@@ -8,6 +8,7 @@ import { EncabezadoComponent } from './componentes/encabezado/encabezado.compone
 import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
 import { FormacionPortfolioComponent } from './componentes/formacion-portfolio/formacion-portfolio.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
     EncabezadoComponent,
     SobreMiComponent,
     FormacionPortfolioComponent,
-    FooterComponent
+    FooterComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
