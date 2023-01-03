@@ -9,6 +9,8 @@ import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
 import { FormacionPortfolioComponent } from './componentes/formacion-portfolio/formacion-portfolio.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
     SobreMiComponent,
     FormacionPortfolioComponent,
     FooterComponent,
-    ContactoComponent
+    ContactoComponent,
+    HabilidadesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
