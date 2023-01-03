@@ -12,7 +12,7 @@
        
        
           <!-- fecha -->
-    <h2 class="blockquote-footer my-2">2022</h2>
+    <h2 class="blockquote-footer my-2">{{miEducacion.fin}}</h2>
    
    
     <!-- lapiz -->
@@ -26,8 +26,8 @@
     <!-- boton que genera modal -->
   
     <a type="button"  class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#certificadoMumuki">
-      Curso "Sé Programar" Desarrollado por CESSI, i2T y Mumuki
-      duracion 95hs</a> 
+       {{miEducacion.curso}} {{miEducacion.institucion}} {{miEducacion.horas_duracion}}
+      </a> 
   
   
       <!-- Modal -->
