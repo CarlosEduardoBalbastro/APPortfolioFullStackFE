@@ -1,0 +1,11 @@
+{
+    "institucion": "Desarrollado por CESSI, i2T y Mumuki",
+    "titulo": "",
+    "imagen": "./assets/img/i2t_etapa_1_2022_CarlosBalbastro.jpg",
+    "curso":"Curso 'Sé Programar' ",
+    
+    "puntaje": 100,
+    "inicio": "2022",
+    "fin": "2022",
+    "horas_duracion":"duracion 95hs"
+}
