@@ -1,0 +1,79 @@
+{
+    "experiencias": [
+        {
+            "id":1,
+            "anio":"2022",
+            "proyecto":"Working Progress pagina Fotografia",
+            "direccion":"",
+            "imagen":""
+        },
+        {
+            "id":2,
+            "anio":"2022",
+            "proyecto":"Working Progress Dietética",
+            "direccion":"",
+            "imagen":""
+        }
+    ],
+    "idiomas":[
+        {
+            "id":1,
+            "lengua":"Inglés",
+            "nivel":"Buen dominio hablado y escrito"
+        },
+        {
+            "id":2,
+            "lengua":"Portugués",
+            "nivel":"Sumamente competente hablado y escrito"
+        }        
+    ],
+    "habilidades": [
+        {
+        "id":1,
+        "tecnologia":"HTML - CSS - JS - TS",
+        "imagen":""
+        },
+        {
+            "id":2,
+            "tecnologia":"Bootstrap",
+            "imagen":""
+        },
+        {
+            "id":3,
+            "tecnologia":"Figma",
+            "imagen":""
+        },
+        {
+            "id":4,
+            "tecnologia":"Ruby",
+            "imagen":""
+        },
+        {
+            "id":5,
+            "tecnologia":"Java",
+            "imagen":""
+        },
+        {
+            "id":6,
+            "tecnologia":"Netbeans",
+            "imagen":""
+        },
+        {
+            "id":7,
+            "tecnologia":"Visual Studio Code",
+            "imagen":""
+        },
+        {
+            "id":8,
+            "tecnologia":"Adobe Photoshop",
+            "imagen":""
+        },
+        {
+            "id":9,
+            "tecnologia":"Adobe Photoshop Lightroom",
+            "imagen":""
+        }
+           
+]
+  
+}
