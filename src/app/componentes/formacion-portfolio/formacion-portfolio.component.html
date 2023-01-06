@@ -6,372 +6,50 @@
   
       <!-- FORMACIOn -->
   
-      <div class="col-sm-6">
+      <div class="col-sm-6" id="educacion">
        
         <h1 class="text-center mx-5 border-bottom border-2 py-3">Formación</h1>
+
+        <ul class="list-group list-group-flush">
+
+          
+  <li *ngFor="let educacion of miEducacion" class="list-group-item" >
+
+    <!-- fecha -->
+    <h2 class="blockquote-footer my-2">{{educacion.fin}}</h2>
+ 
+    <!-- boton que genera modal -->
+  <a type="button"  class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#imgCertificados">
+    {{educacion.curso}} {{educacion.institucion}} {{educacion.horas_duracion}}
+   </a>
+
+    <!-- Modal -->
+   <div class="modal fade" id="imgCertificados" tabindex="-1" aria-labelledby="imgCertificadoModalLabel" aria-hidden="true">
+            
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title" id="imgCertificadoModalLabel">{{educacion.fin}}</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
+        </div>
+        <div class="modal-body w-100">
+          <img [src]="educacion.imagen" class="img-fluid mx-auto d-block w-100" alt="Certificados">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </li>
+
+      </ul>
        
        
-          <!-- fecha -->
-    <h2 class="blockquote-footer my-2">{{miEducacion.fin}}</h2>
-   
-   
     <!-- lapiz -->
     <!-- <div class="btn-edit">
         <a href="#" class="btn-left text-decoration-none"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
           <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
         </svg></a>
       </div> -->
-  
-  
-    <!-- boton que genera modal -->
-  
-    <a type="button"  class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#certificadoMumuki">
-       {{miEducacion.curso}} {{miEducacion.institucion}} {{miEducacion.horas_duracion}}
-      </a> 
-  
-  
-      <!-- Modal -->
-  
-      <div class="modal fade" id="certificadoMumuki" tabindex="-1" aria-labelledby="mumukiModalLabel" aria-hidden="true">
-            
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <div class="modal-title" id="mumukiModalLabel">2022</div>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
-            </div>
-            <div class="modal-body w-100">
-              <img src="./assets/img/i2t_etapa_1_2022_CarlosBalbastro.jpg" class="img-fluid mx-auto d-block w-100" alt="Certificado Mumuki">
-            </div>
-          </div>
-        </div>
-      </div>
-  
-  
-  
-  
-    
-  <!-- fecha -->
-  
-  <h2 class="blockquote-footer my-2">2022</h2>
-  
-  
-  <!-- boton que genera modal -->
-  
-  <a type="button"  class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#certificadoScrum">
-    Curso "Gestión de Proyectos con Metodologías Ágiles" de FUNDACIÓN
-  TELEFONICA MOVISTAR cuya carga horario fue de 40hs
-  </a>
-  
-  
-    <!-- Modal -->
-  
-    <div class="modal fade" id="certificadoScrum" tabindex="-1" aria-labelledby="scrumModalLabel" aria-hidden="true">
-          
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="modal-title" id="scrumModalLabel">2022</div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
-          </div>
-          <div class="modal-body w-100">
-            <img src="./assets/img/FT AR - Certificado.jpg" class="img-fluid mx-auto d-block w-100" alt="fundacion telefonica">
-          </div>
-        </div>
-      </div>
-    </div>
-  
-     <!-- fecha -->
-  
-     <h2 class="blockquote-footer my-2">2021</h2>
-  
-     <!-- boton que genera modal  -->
-     <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#certificadoUnc">
-       Curso "Diseño y Desarrollo Web" dictado por la UNIVERSIDAD
-     TECNOLÓGICA DE CÓRDOBA cuya carga horario fue de 20hs
-     </a>
-     
-     
-     <!-- modal -->
-     
-     <div class="modal fade" id="certificadoUnc" tabindex="-1" aria-labelledby="uncModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
-           <div class="modal-header">
-             <div class="modal-title" id="uncModalLabel">2021</div>
-             <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
-           </div>
-           <div class="modal-body w-100">
-             <img src="./assets/img/certificado_ub5c7RmqqReqmdYjH4Z_29537373.jpg" class="img-fluid mx-auto d-block w-100" alt="certificado UTN">
-           </div>
-         </div>
-       </div>
-     </div>
-     
-     <!-- fecha -->
-  
-  <h2 class="blockquote-footer my-2">2021</h2>
-  
-  <!-- boton modal -->
-  
-  <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#certificadoPolitecnico">
-    Curso "Diseño y Desarrollo Web" organizado por la SECRETARIA
-    DE PROMOCIÓN DE EMPLEO DE LA MUNICIPALIDAD DE CÓRDOBA
-    dictado por profesionales de la UNIVERSIDAD TECNOLÓGICA NACIONAL
-  </a>
-  
-  <!-- modal -->
-  <div class="modal fade" id="certificadoPolitecnico" tabindex="-1" aria-labelledby="politecnicoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="politecnicoModalLabel">2021</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/certificado_politecnico.jpg" class="img-fluid mx-auto d-block w-100" alt="certificado politecnico">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  
-  <!-- fecha -->
-  
-  <h2 class="blockquote-footer my-2">2021</h2>
-  
-  <!-- boton modal -->
-  
-  <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#fundacionTelefonica1">
-    Curso "Diseño Web con HTML5 y CSS3" dictado por FUNDACIÓN TELEFÓNICA
-  MOVISTAR cuya carga horario fue 30hs
-  </a>
-  
-  <!-- modal -->
-  <div class="modal fade" id="fundacionTelefonica1" tabindex="-1" aria-labelledby="fundacionModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="fundacionModalLabel">2021</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/FT AR - Diseño Web con HTML5 + CSS.jpg" class="img-fluid mx-auto d-block w-100" alt="certificado fundacion telefonica">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <!-- FECHA -->
-  
-  <h2 class="blockquote-footer my-2">2021</h2>
-  
-  <!-- boton modal -->
-  
-  <a type="botton" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#fundacionTelefonica2">Ha superado con éxito el curso de 30hs "Introduccion a la Programación"
-    dictado por FUNDACIÓN TELEFÓNICA MOVISTAR</a>
-  
-  <!-- modal -->
-  
-  <div class="modal fade" id="fundacionTelefonica2" tabindex="-1" aria-labelledby="telefonicaModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="telefonicaModalLabe">2021</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/FT AR - Introducción a la Programación.jpg" alt="Introducción a la Programación" class="img-fluid mx-auto d-block w-100">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <h2 class="blockquote-footer my-2">2021</h2>
-  
-  <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#fundamentosProgramacionTelefonica">
-    Curso "Fundamentos de Programación" de FUNDACIÓN TELEFÓNICA MOVISTAR
-  cuya carga horario fue de 40hs
-  </a>
-  
-  <!-- modal -->
-  
-  <div class="modal fade" id="fundamentosProgramacionTelefonica" tabindex="-1" aria-labelledby="fundProgTelModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="fundProgTelModalLabel">2021</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/FT AR - Fundamentos de Programación.jpg" alt="Introducción a la Programación" class="img-fluid mx-auto d-block w-100">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <!-- fecha -->
-  <h2 class="blockquote-footer my-2">2021</h2>
-  
-  <!-- boton modal -->
-  
-  <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#habilidadEmpleo">
-    Ha superado con éxito el Curso "Habilidades para el Empleo" de
-    FUNDACIÓN TELEFÓNICA MOVISTAR cuya carga horaria fue de 30hs
-  </a>
-  
-  <!-- modal -->
-  
-  <div class="modal fade" id="habilidadEmpleo" tabindex="-1" aria-labelledby="habilidadEmpleoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="habilidadEmpleoModalLabel">2021</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/FT AR - Habilidades para el Empleo.jpg" alt="Introducción a la Programación" class="img-fluid mx-auto d-block w-100">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- fecha -->
-  <h2 class="blockquote-footer my-2">2021</h2>
-  
-  <!-- boton modal -->
-  
-  <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#graphicDesign">
-    Certifico que ha asistido y completado el curso "Fundamentos de Diseño Grafico" de 18hs
-    en Centro de Capacitación y Desarrollo Profesional Educación IT
-  </a>
-  
-  <!-- modal -->
-  
-  <div class="modal fade" id="graphicDesign" tabindex="-1" aria-labelledby="graphicDesignModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="graphicDesignModalLabel">2021</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/Certificado Fundamentos del Diseño Grafico.jpg" alt="Introducción a la Programación" class="img-fluid mx-auto d-block w-100">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <!-- fecha -->
-  <h2 class="blockquote-footer my-2">2021</h2>
-  
-  <!-- boton modal -->
-  
-  <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#introMundoWeb">
-    Curso "Introducción al Mundo Web" 12hs dictado por 
-    Centro de Capacitación y Desarrollo Profesional Educacion IT
-  </a>
-  
-  <!-- modal -->
-  
-  <div class="modal fade" id="introMundoWeb" tabindex="-1" aria-labelledby="introMundoWebModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="introMundoWebModalLabel">2021</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/Certificado Introduccion al Mundo Web.jpg" alt="Introducción a la Programación" class="img-fluid mx-auto d-block w-100">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- fecha -->
-  <h2 class="blockquote-footer my-2">2021</h2>
-  
-  <!-- boton modal -->
-  
-  <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#introLenguajeProgramacion">
-  Curso "Introducción al lenguaje de Programación" 12hs 
-  dictado por Centro de Capacitacion y Desarrollo Profesional Educacion IT
-  </a>
-  
-  <!-- modal -->
-  
-  <div class="modal fade" id="introLenguajeProgramacion" tabindex="-1" aria-labelledby="introLenProgModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="introLenProgModalLabel">2021</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/Certificado Introducción Lenguaje de Programación.jpg" alt="Introducción a la Programación" class="img-fluid mx-auto d-block w-100">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <!-- fecha -->
-  <h2 class="blockquote-footer my-2">2021</h2>
-  
-  <!-- boton modal -->
-  
-  <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#progJs">
-    ha superado con éxito el curso de 40hs "Programación con JavaScript"
-    de la FUNDACIÓN TELEFÓNICA MOVISTAR
-  </a>
-  
-  <!-- modal -->
-  
-  <div class="modal fade" id="progJs" tabindex="-1" aria-labelledby="progJsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="progJsModalLabel">2021</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/FT AR - Programación con JavaScript.jpg" alt="Introducción a la Programación" class="img-fluid mx-auto d-block w-100">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- fecha -->
-  <h2 class="blockquote-footer my-2">2009</h2>
-  
-  <!-- boton modal -->
-  
-  <a type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#tecnicoImagenes">
-    Técnico Superior en Imágenes 
-  Escuela de Artes Aplicadas Lino Enea Spilimbergo
-  </a>
-  
-  <!-- modal -->
-  
-  <div class="modal fade" id="tecnicoImagenes" tabindex="-1" aria-labelledby="tecnicoImagenesModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="tecnicoImagenesModalLabel">2009</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body w-100">
-          <img src="./assets/img/Titulo_Fotografia_Carlos_Balbastroweb.jpg" class="img-fluid mx-auto d-block w-100">
-        </div>
-      </div>
-    </div>
-  </div>
-  
   
   
   
