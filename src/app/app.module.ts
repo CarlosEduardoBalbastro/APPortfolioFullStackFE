@@ -12,6 +12,7 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormacionPortfolioComponent,
     FooterComponent,
     ContactoComponent,
-    HabilidadesComponent
+    HabilidadesComponent,
+    
   ],
   imports: [
     BrowserModule,
