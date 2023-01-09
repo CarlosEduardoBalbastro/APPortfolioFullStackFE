@@ -1,7 +1,7 @@
 {
     
         
-  "id":"1",
+  "id":1,
   "nombre":"Carlos Eduardo Balbastro",
 "empresa":"Empresa i2T",
  "ocupacion":"DESARROLLADOR",
@@ -9,6 +9,7 @@
  "imagen":"./assets/img/DSC_1958_perfil_CEB.png",
 "sobreMi":"En el año 2022 recibi una Beca de la Empresa i2T sobre Fundamentos de la Programación y concluí con éxito. Actualmente estoy Cursando  la Segunda Etapa de Argentina Programa",
 "yoprogramo":"#YoProgramo"
+
 
         
     
