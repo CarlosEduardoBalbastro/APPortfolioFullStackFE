@@ -31,47 +31,65 @@
         {
         "id":1,
         "tecnologia":"HTML - CSS - JS - TS",
-        "imagen":""
+        "imagen":"",
+        "porcentaje":100,
+        "color":"green"
         },
         {
             "id":2,
             "tecnologia":"Bootstrap",
-            "imagen":""
+            "imagen":"",
+            "porcentaje":100,
+            "color":"green"
         },
         {
             "id":3,
             "tecnologia":"Figma",
-            "imagen":""
+            "imagen":"",
+            "porcentaje":100,
+            "color":"green"
         },
         {
             "id":4,
             "tecnologia":"Ruby",
-            "imagen":""
+            "imagen":"",
+            "porcentaje":100,
+            "color":"green"
         },
         {
             "id":5,
             "tecnologia":"Java",
-            "imagen":""
+            "imagen":"",
+            "porcentaje":100,
+            "color":"green"
         },
         {
             "id":6,
             "tecnologia":"Netbeans",
-            "imagen":""
+            "imagen":"",
+            "porcentaje":100,
+            "color":"green"
         },
         {
             "id":7,
             "tecnologia":"Visual Studio Code",
-            "imagen":""
+            "imagen":"",
+            "porcentaje":100,
+            "color":"green"
         },
         {
             "id":8,
             "tecnologia":"Adobe Photoshop",
-            "imagen":""
+            "imagen":"",
+            "porcentaje":100,
+            "color":"green"
         },
         {
             "id":9,
             "tecnologia":"Adobe Photoshop Lightroom",
-            "imagen":""
+            "imagen":"",
+            "porcentaje":100,
+            "color":"green"
         }
            
 ]
