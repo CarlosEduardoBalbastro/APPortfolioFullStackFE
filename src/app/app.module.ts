@@ -11,6 +11,13 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { HttpClientModule } from '@angular/common/http';
+import { IndexComponent } from './componentes/index/index.component';
+import { Page404Component } from './componentes/page404/page404.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { LogoutComponent } from './componentes/logout/logout.component';
+import { ModalComponent } from './modales/modal/modal.component';
+import { ModalLoginComponent } from './modales/modal-login/modal-login.component';
+import { ModalCertificadosComponent } from './componentes/modal-certificados/modal-certificados.component';
 
 
 @NgModule({
@@ -23,6 +30,13 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ContactoComponent,
     HabilidadesComponent,
+    IndexComponent,
+    Page404Component,
+    LoginComponent,
+    LogoutComponent,
+    ModalComponent,
+    ModalLoginComponent,
+    ModalCertificadosComponent,
     
   ],
   imports: [

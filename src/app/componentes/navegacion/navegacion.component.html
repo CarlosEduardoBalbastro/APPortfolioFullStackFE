@@ -25,24 +25,19 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#sobreMi">Sobre mi</a>
+            <a class="nav-link" href="#sobreMi" routerlink="/sobremi">Sobre mi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
+            <a class="nav-link" href="#contacto" routerLink="/contacto">Contacto</a>
           </li>  
-          <!-- <li class="nav-item dropdown dropdown-toggle-split">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Portfolios</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/PortfolioArgentinaPrograma/PortfolioFrontEnd/land_Diet.html" target="_blank">Working Progres Mix-Saludables</a></li>
-              <li><a class="dropdown-item" href="/PortfolioArgentinaPrograma/PortfolioFrontEnd/land_Photo.html" target="_blank">Working Progres Fotografía</a></li>
-  
-              <li><a class="dropdown-item" href="/PortfolioArgentinaPrograma/PortfolioFrontEnd/land_Productos.html" target="_blank">Working Progress Productos</a></li>
-              <li><a class="dropdown-item" href="/PortfolioArgentinaPrograma/PortfolioFrontEnd/land_Diet2.html" target="_blank">Working Progres Alimentos Saludables</a></li>
-            </ul>
-          </li> -->
+       
           <li class="nav-item">
             <!-- <a class="nav-link btn text-decoration-none border-0 text-white" href="#" type="button" target="_blank">Login</a> -->
                
+
+
+          
+
             <!-- boton que genera modal -->
   
     <a type="button"  class="nav-item btn text-decoration-none border-0 text-white" data-bs-toggle="modal" data-bs-target="#login">
@@ -52,37 +47,9 @@
   
           </li>
           
-      <!-- Modal -->
-      <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
-            
-        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
-          <div class="modal-content">
-            <div class="modal-header">
-              <!-- <div class="modal-title" id="loginModal">2022</div> -->
-              <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
-            </div>
-            <div class="modal-body w-100">
-              <form>
-                <div class="mb-3">
-                  <label for="inPutUser" class="form-label">Usuario</label>
-                  <input type="text" class="form-control" id="inPutUser" aria-describedby="userHelp" placeholder="Nombre Usuario">
-                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                </div>
-                <div class="mb-3">
-                  <label for="inPutPassword" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="inPutPassword" placeholder="Password">
-                </div>
-                <!-- <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div> -->
-                <button type="submit" class="btn btn-dark d-block w-100">Login</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
      
+          <app-login></app-login>
+          <app-logout></app-logout>
       
            </ul>
   
