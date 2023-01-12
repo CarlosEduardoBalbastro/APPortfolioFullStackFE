@@ -15,6 +15,8 @@ obtenerDatos():Observable<any>{
   return this.http.get('./assets/data/data.json');
 }
 
+
+
 obtenerEducacion():Observable<any>{
   return this.http.get('./assets/data/data_Educacion.json');
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+
 
 @Component({
   selector: 'app-modal-certificados',
@@ -8,16 +8,13 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ModalCertificadosComponent implements OnInit {
 
-  miEducacion:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+ 
+  constructor() { }
 
   ngOnInit(): void {
 
 
-    this.datosPortfolio.obtenerEducacion().subscribe(data => {
-      
-      this.miEducacion=data.educacion;
-    })
+ 
 
 
   }
