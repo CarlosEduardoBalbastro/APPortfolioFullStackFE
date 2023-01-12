@@ -4,7 +4,7 @@
     {
         "id":1,
         "institucion": "Desarrollado por CESSI, i2T y Mumuki",
-        "imagen": "./assets/img/i2t_etapa_1_2022_CarlosBalbastro.jpg",
+        "imagen": "../assets/img/i2t_etapa_1_2022_CarlosBalbastro.jpg",
         "curso":"Curso 'Sé Programar' ",
         "puntaje": 100,
         "inicio": "2022",
@@ -15,10 +15,8 @@
      {
          "id":2,
         "institucion": " de FUNDACIÓN TELEFONICA MOVISTAR ",
-        
-        "imagen": "./assets/img/FT AR - Certificado.jpg",
+         "imagen": "../assets/img/FT AR - Certificado.jpg",
         "curso":"Curso 'Gestión de Proyectos con Metodologías Ágiles'",
-        
         "puntaje": 100,
         "inicio": "2022",
         "fin": "2022",
@@ -27,10 +25,8 @@
      {
       "id":3,
       "institucion": " dictado por la UNIVERSIDAD TECNOLÓGICA DE CÓRDOBA ",
-      
-      "imagen": "./assets/img/certificado_ub5c7RmqqReqmdYjH4Z_29537373.jpg",
+      "imagen": "../assets/img/certificado_ub5c7RmqqReqmdYjH4Z_29537373.jpg",
       "curso":"Curso 'Diseño y Desarrollo Web'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -39,10 +35,8 @@
    {
       "id":4,
       "institucion": " organizado por la SECRETARIA DE PROMOCIÓN DE EMPLEO DE LA MUNICIPALIDAD DE CÓRDOBA dictado por profesionales de la UNIVERSIDAD TECNOLÓGICA NACIONAL",
-      
-      "imagen": "./assets/img/certificado_politecnico.jpg",
+      "imagen": "../assets/img/certificado_politecnico.jpg",
       "curso":"Curso 'Diseño y Desarrollo Web'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -51,10 +45,8 @@
    {
       "id":5,
       "institucion": " dictado por FUNDACIÓN TELEFÓNICA MOVISTAR ",
-      
-      "imagen": "./assets/img/FT AR - Diseño Web con HTML5 + CSS.jpg",
+      "imagen": "../assets/img/FT AR - Diseño Web con HTML5 + CSS.jpg",
       "curso":"Curso 'Diseño Web con HTML5 y CSS3'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -63,10 +55,8 @@
    {
       "id":6,
       "institucion": " dictado por FUNDACIÓN TELEFÓNICA MOVISTAR",
-      
-      "imagen": "./assets/img/FT AR - Introducción a la Programación.jpg",
+      "imagen": "../assets/img/FT AR - Introducción a la Programación.jpg",
       "curso":"Ha superado con éxito el curso  'Introduccion a la Programación'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -75,10 +65,8 @@
    {
       "id":7,
       "institucion": " de FUNDACIÓN TELEFÓNICA MOVISTAR",
-      
-      "imagen": "./assets/img/FT AR - Fundamentos de Programación.jpg",
+      "imagen": "../assets/img/FT AR - Fundamentos de Programación.jpg",
       "curso":"Curso 'Fundamentos de Programación'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -87,10 +75,8 @@
    {
       "id":9,
       "institucion": " de FUNDACIÓN TELEFÓNICA MOVISTAR",
-      
-      "imagen": "./assets/img/FT AR - Habilidades para el Empleo.jpg",
+      "imagen": "../assets/img/FT AR - Habilidades para el Empleo.jpg",
       "curso":"Ha superado con éxito el Curso 'Habilidades para el Empleo'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -99,10 +85,8 @@
    {
       "id":10,
       "institucion": " en Centro de Capacitación y Desarrollo Profesional Educación IT",
-      
-      "imagen": "./assets/img/Certificado Fundamentos del Diseño Grafico.jpg",
+      "imagen": "../assets/img/Certificado Fundamentos del Diseño Grafico.jpg",
       "curso":"Certifico que ha asistido y completado el curso 'Fundamentos de Diseño Grafico'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -111,10 +95,8 @@
    {
       "id":11,
       "institucion": " en Centro de Capacitación y Desarrollo Profesional Educación IT",
-      
-      "imagen": "./assets/img/Certificado Fundamentos del Diseño Grafico.jpg",
+      "imagen": "../assets/img/Certificado Fundamentos del Diseño Grafico.jpg",
       "curso":"Certifico que ha asistido y completado el curso 'Fundamentos de Diseño Grafico'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -123,10 +105,8 @@
    {
       "id":12,
       "institucion": " dictado por Centro de Capacitación y Desarrollo Profesional Educacion IT",
-      
-      "imagen": "./assets/img/Certificado Introduccion al Mundo Web.jpg",
+      "imagen": "../assets/img/Certificado Introduccion al Mundo Web.jpg",
       "curso":"Curso 'Introducción al Mundo Web'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -135,10 +115,8 @@
    {
       "id":13,
       "institucion": " dictado por Centro de Capacitacion y Desarrollo Profesional Educacion IT",
-      
-      "imagen": "./assets/img/Certificado Introducción Lenguaje de Programación.jpg",
+      "imagen": "../assets/img/Certificado Introducción Lenguaje de Programación.jpg",
       "curso":"Curso 'Introducción al lenguaje de Programación'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -147,10 +125,8 @@
    {
       "id":14,
       "institucion": " de la FUNDACIÓN TELEFÓNICA MOVISTAR",
-      
-      "imagen": "./assets/img/FT AR - Programación con JavaScript.jpg",
+      "imagen": "../assets/img/FT AR - Programación con JavaScript.jpg",
       "curso":"Ha superado con éxito el curso 'Programación con JavaScript'",
-      
       "puntaje": 100,
       "inicio": "2021",
       "fin": "2021",
@@ -159,11 +135,9 @@
    {
       "id":15,
       "institucion": " Escuela de Artes Aplicadas Lino Enea Spilimbergo",
-      
-      "imagen": "./assets/img/Titulo_Fotografia_Carlos_Balbastroweb.jpg",
+      "imagen": "../assets/img/Titulo_Fotografia_Carlos_Balbastroweb.jpg",
       "curso":"Técnico Superior en Imágenes",
-      
-      "puntaje": 100,
+       "puntaje": 100,
       "inicio": "2005",
       "fin": "2009",
       "horas_duracion":""
