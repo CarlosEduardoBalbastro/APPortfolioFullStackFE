@@ -2,17 +2,23 @@
     "experiencias": [
         {
             "id":1,
-            "anio":"2022",
-            "proyecto":"Working Progress pagina Fotografia",
-            "direccion":"",
-            "imagen":""
+            "empresa":"",
+            "estrabajoactual":1,
+            "inicio":"2022",
+            "fin":"2022",
+            "descripcion":"Working Progress Pagina Fotografía",
+            "direccion":"https://zingy-parfait-bdcf23.netlify.app/",
+            "imagen":"",
+            "stackusado": "HTML CSS BOOTSTRAP"
         },
         {
             "id":2,
-            "anio":"2022",
-            "proyecto":"Working Progress Dietética",
-            "direccion":"",
-            "imagen":""
+            "inicio":"2022",
+            "fin":"2022",
+            "descripcion":"Landing Dietetica ",
+            "direccion":"https://quiet-malabi-0c97b6.netlify.app/index.html",
+            "imagen":"",
+            "stackusado":"HTML CSS JS BOOTSTRAP"
         }
     ],
     "idiomas":[

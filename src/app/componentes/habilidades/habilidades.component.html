@@ -19,13 +19,13 @@
 
     <!-- fecha -->
 
-    <h2 class="blockquote-footer my-2" id="working_progress_foto">{{experiencias.anio}}</h2>
+    <h2 class="blockquote-footer my-2" id="working_progress_foto">{{experiencias.fin}}</h2>
 
 
     <!-- Enlace Landpage -->
     
-    <a type="button" href="" target="_blank" class="btn text-decoration-none border-0 text-dark">
-      {{experiencias.proyecto}}
+    <a type="button" [routerLink]="[{}]" target="_blank" class="btn text-decoration-none border-0 text-dark">
+      {{experiencias.descripcion}} <span class="fw-semibold">{{experiencias.stackusado}}</span> 
     </a> 
 
 

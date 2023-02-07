@@ -3,12 +3,18 @@
         
   "id":1,
   "nombre":"Carlos Eduardo Balbastro",
-"empresa":"Empresa i2T",
- "ocupacion":"DESARROLLADOR",
- "area":"FULLSTACK JR",
- "imagen":"./assets/img/DSC_1958_perfil_CEB.png",
-"sobreMi":"En el año 2022 recibi una Beca de la Empresa i2T sobre Fundamentos de la Programación y concluí con éxito. Actualmente estoy Cursando  la Segunda Etapa de Argentina Programa",
-"yoprogramo":"#YoProgramo"
+  "apellido":"",
+  "domicilio":"",
+  "fechaNac": "07-26-1982",
+  "correo":"balbastro@gmail.com",
+  "sobreMi":"El 1 de febrero del 2021 comencé a estudiar HTML, CSS y JS de manera autodidacta, realicé distintos cursos que encontré en la web para complementar. Hace diez años me desenvuelvo trabajando como Fotógrafo y ahora quiero llevar esa experiencia al rubro de la tecnología como Desarrollador Front End. Mi principal objetivo es aprender, crecer y aportar todo lo que pueda a la ",
+  "imagen":"./assets/img/DSC_1958_perfil_CEB.png",
+  "edad":40,
+  "empresa":"Empresa i2T",
+  "ocupacion":"DESARROLLADOR",
+  "area":"FULLSTACK",
+  "yoprogramo":"Empresa"
+
 
 
         
