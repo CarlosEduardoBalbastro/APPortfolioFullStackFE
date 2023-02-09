@@ -39,6 +39,8 @@
    <span class="fw-semibold">{{educacion.curso}} </span>{{educacion.institucion}} {{educacion.horas_duracion}}
    </a>
 
+   <img [src]="educacion.imagen" class="img-fluid mx-auto d-block w-75" [alt]="educacion.curso">
+
     <!-- lapiz -->
     <div class="btn-edit float-end visually-hidden">
       <a href="#" class="btn-right text-decoration-none"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
@@ -49,7 +51,7 @@
  
  <!-- Modal -->
     
-  <div class="modal fade" id="imgCertificados" tabindex="-1" aria-labelledby="imgCertificadoModalLabel" aria-hidden="true">
+  <div class="modal fade" id="imgCertificados"  tabindex="-1" aria-labelledby="imgCertificadoModalLabel" aria-hidden="true">
             
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
