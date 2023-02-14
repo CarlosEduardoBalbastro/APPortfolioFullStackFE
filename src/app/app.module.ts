@@ -19,6 +19,14 @@ import { LogoutComponent } from './componentes/logout/logout.component';
 import { ModalComponent } from './modales/modal/modal.component';
 import { ModalLoginComponent } from './modales/modal-login/modal-login.component';
 import { ModalCertificadosComponent } from './componentes/modal-certificados/modal-certificados.component';
+import { ModalEncabezadoComponent } from './componentes/modal-encabezado/modal-encabezado.component';
+import { ModalCvComponent } from './componentes/modal-cv/modal-cv.component';
+import { ModalImgperfilComponent } from './componentes/modal-imgperfil/modal-imgperfil.component';
+import { ModalSobremiComponent } from './componentes/modal-sobremi/modal-sobremi.component';
+import { ModalFormacionComponent } from './componentes/modal-formacion/modal-formacion.component';
+import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal-habilidades.component';
+import { ModalPortfolioComponent } from './componentes/modal-portfolio/modal-portfolio.component';
+import { ModalIdiomaComponent } from './componentes/modal-idioma/modal-idioma.component';
 
 
 @NgModule({
@@ -38,6 +46,14 @@ import { ModalCertificadosComponent } from './componentes/modal-certificados/mod
     ModalComponent,
     ModalLoginComponent,
     ModalCertificadosComponent,
+    ModalEncabezadoComponent,
+    ModalCvComponent,
+    ModalImgperfilComponent,
+    ModalSobremiComponent,
+    ModalFormacionComponent,
+    ModalHabilidadesComponent,
+    ModalPortfolioComponent,
+    ModalIdiomaComponent,
     
   ],
   imports: [
