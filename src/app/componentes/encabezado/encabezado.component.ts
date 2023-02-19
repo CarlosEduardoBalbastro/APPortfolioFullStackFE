@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/model/persona';
+import { PersonaService } from 'src/app/servicios/persona.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -8,16 +10,39 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EncabezadoComponent implements OnInit {
 
-  miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  personas: Persona[]=[];
+  //miPortfolio:any;
+  constructor(private sPersona:PersonaService) { }
 
   ngOnInit(): void {
 
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.miPortfolio=data;
-    } );
+    this.crearPersona();
+
+    // this.sPersona.obtenerPersona().subscribe(data => {
+    //   console.log(data);
+    //   this.persona=data;
+    // } );
+
+
 
   }
 
+  crearPersona():void{
+    this.sPersona.obtenerPersona().subscribe(data => {
+      this.personas=data;
+    })
+  }
+
+  traerPersona():void{
+    this.sPersona.obtenerPersona().subscribe(data => {
+      this.personas=data;
+    })
+  }
+
+  borrarPersona(id:number):void{
+    this.sPersona.borrarPersona(id).subscribe(data => {
+      this.personas;
+    })
+  }
+  
 }

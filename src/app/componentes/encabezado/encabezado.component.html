@@ -4,12 +4,12 @@
       <div class="col-sm-6">
         <figure class="text-center m-2 mb-0 p-2">
           <blockquote class="blockquote">
-            <p class="display-6">{{miPortfolio.nombre}}</p>
+            <p class="display-6">{{personas[0].nombre}} {{personas[0].apellido}}</p>
 
           </blockquote>
          
           <figcaption class="blockquote-footer"> 
-            {{miPortfolio.ocupacion}} <cite title="Source Title">{{miPortfolio.area}}</cite>
+            {{personas[0].ocupacion}} <cite title="Source Title">{{personas[0].area}}</cite>
          <div class="btn-edit float-end mx-3 ">
           <a href="#" class="btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark"  viewBox="0 0 16 16">
             <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
@@ -22,7 +22,7 @@
             
             <!-- boton pencil  -->
         
-        <div class="btn-edit float-end mx-3 ">
+        <div class="btn-edit float-end mx-3 visually-hidden">
           <a href="#" class="btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#dashboardCV"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark"  viewBox="0 0 16 16">
             <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
           </svg></a>
@@ -37,7 +37,7 @@
           </a>
    
 
-            <a class="text-decoration-none text-dark " [href]="miPortfolio.cv" download="CV23_Carlos_Balbastro_FrontEndJR">Descargar <span class="fw-semibold">CV</span></a></button>
+            <a class="text-decoration-none text-dark " [href]="personas[0].cv" download="CV23_Carlos_Balbastro_FrontEndJR">Descargar <span class="fw-semibold">CV</span></a></button>
 
         </figure>
       </div>
@@ -48,20 +48,22 @@
       <div class="col-sm-6">
 
     <a type="button"  class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#imgPerfil">
-      <img [src]='miPortfolio.imagen' class="w-50 rounded-circle mt-0 pt-0 float-end float-md-none" alt="Carlos Balbastro FrontEnd" width="100">
+      <img [src]='personas[0].imagen' class="w-50 rounded-circle mt-0 pt-0 float-end float-md-none" alt="Carlos Balbastro FrontEnd" width="100">
     </a>
       <!-- boton pencil  -->
         
-      <div class="btn-edit  float-end">
-        <a href="#" class="btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#dashboardimgperfil"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
+      <div class="btn-edit  float-end visually-hidden">
+        <a href="#" class="btn-right text-decoration-none " data-bs-toggle="modal" data-bs-target="#dashboardimgperfil"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
           <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
         </svg></a>
       </div>
 
-      <app-modal-cv></app-modal-cv>
+      <!-- <app-modal-cv></app-modal-cv> -->
       <app-modal-encabezado></app-modal-encabezado>
-        <app-modal-imgperfil></app-modal-imgperfil>
-          
+        <!-- <app-modal-imgperfil></app-modal-imgperfil> -->
+         
+     
+        
       
       <!-- Modal -->
 
@@ -71,7 +73,7 @@
             <div class="modal-content">
                
                 <div class="modal-header">
-                  <h1 class="modal-title fs-6" id="staticBackdropLabel"><span class="fw-semibold">{{miPortfolio.area}}</span> {{miPortfolio.nombre}}</h1>
+                  <h1 class="modal-title fs-6" id="staticBackdropLabel"><span class="fw-semibold">{{personas[0].ocupacion}}</span> {{personas[0].area}}</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -80,18 +82,19 @@
                             <h5>Información Personal</h5>
                 
                             <ul>
-                              <li>Nacionalidad: {{miPortfolio.nacionalidad}}</li>
-                              <li>Lugar de Nacimiento: {{miPortfolio.lugarNacimiento}}</li>
-                              <li>Fecha Nacimiento: {{miPortfolio.fechaNac}}</li>
-                              <li>Estado Civil: {{miPortfolio.estadoCivil}}</li>
-                              <li>Hijos: {{miPortfolio.hijos}}</li>
-                              <li>Ciudad de Residencia: {{miPortfolio.lugarResidencia}}</li>
+                              <li>Nombre: {{personas[0].nombre}} {{personas[0].apellido}}</li>
+                              <li>Nacionalidad: {{personas[0].nacionalidad}}</li>
+                              <li>Lugar de Nacimiento: {{personas[0].lugarNacimiento}}</li>
+                              <li>Fecha Nacimiento: {{personas[0].fechaNac}}</li>
+                              <li>Estado Civil: {{personas[0].estadoCivil}}</li>
+                              <li>Hijos: {{personas[0].hijos}}</li>
+                              <li>Ciudad de Residencia: {{personas[0].lugarResidencia}}</li>
                               
                             </ul>
                         </div>
                         <div class="col-sm-4">
                            
-                            <img [src]="miPortfolio.imagen" class="w-75 rounded-circle mt-0 pt-0 float-sm-start" alt="Carlos Balbastro FrontEnd"> 
+                            <img [src]="personas[0].imagen" class="w-75 rounded-circle mt-0 pt-0 float-sm-start" alt="Carlos Balbastro FrontEnd"> 
                         </div>
                     </div>
                  
@@ -111,7 +114,33 @@
 
       </div>
 
+   <!-- sobre mi -->
+   <div class="container mt-5" id="sobreMi">
+ 
+    <a href="#sobreMiHiden" type="button" class="btn text-decoration-none border-0 text-dark" data-bs-toggle="collapse"  ><h3>Sobre mi...
 
+        <!-- lapiz -->
+    <div class="btn-edit float-end mx-2 visually-hidden" data-bs-toggle="modal" data-bs-target="#dashboardsobremi">
+      <a href="#" class="btn-right text-decoration-none"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
+        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+      </svg></a>
+    </div>
+
+
+    </h3></a>
+ 
+ 
+  
+    
+      <div class="card card-body border-0">
+        <p id="sobreMiHiden" type="text" class="collapse multi-collapse">{{personas[0].sobreMi}} <b></b>.</p> 
+      </div>
+  
+     
+     
+    
+  
+  </div>
 
   
   
