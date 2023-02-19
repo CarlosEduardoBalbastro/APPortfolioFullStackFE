@@ -15,7 +15,7 @@
 
 <!-- Experiencias -->
 <ul class="list">
-  <li *ngFor="let experiencias of miExperiencia" class="list-group-item" >
+  <li *ngFor="let experiencias of experiencias" class="list-group-item" >
 
     <!-- fecha -->
 
@@ -65,7 +65,7 @@
 
       <!-- Habilidades -->
       <ul class="list">
-        <li *ngFor="let habilidades of miHabilidad"  class="list-group-item">
+        <li *ngFor="let habilidades of habilidades"  class="list-group-item">
           <!-- lapiz -->
        <div class="btn-edit float-end ">
         <a href="#" class=" text-decoration-none" data-bs-toggle="modal" data-bs-target="#dashboardHabilidades"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
@@ -102,7 +102,7 @@
       
 
     <ul class="list-group list-group-flush">
-      <li *ngFor="let idiomas of miIdioma" class="list-group-item" >
+      <li *ngFor="let idiomas of idiomas" class="list-group-item" >
 
         <dt class="mt-5">{{idiomas.lengua}}</dt>
         

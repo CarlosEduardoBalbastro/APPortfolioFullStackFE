@@ -29,15 +29,15 @@
         <ul class="list-group list-group-flush">
 
           
-  <li *ngFor="let educacion of miEducacion" class="list-group-item" >
+  <li *ngFor="let educacion of formacion" class="list-group-item" >
 
     <!-- fecha -->
     <h2 class="blockquote-footer my-2">{{educacion.fin}}</h2>
  
-    <!-- boton que genera modal -->
-  <a type="button"  class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#imgCertificados">
+   
+  
    <span class="fw-semibold">{{educacion.curso}} </span>{{educacion.institucion}} {{educacion.horas_duracion}}
-   </a>
+   
 
    <img [src]="educacion.imagen" class="img-fluid mx-auto d-block w-75" [alt]="educacion.curso">
 
