@@ -1,104 +1,105 @@
-<div class="modal fade" id="dashboardPortfolio" tabindex="-1" aria-labelledby="mumukiModalLabel" aria-hidden="true">
+ <!-- modal crear experiencia -->
+ <div class="modal fade" id="crearPortfolio" tabindex="-1" aria-labelledby="modalToggleCrearExperiencia" aria-hidden="true">
           
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content ">
-           
-            <div class="modal-header">
-        
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <h5 class="text-center">Editar Portfolio</h5>
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content ">
+         
+          <div class="modal-header">
+      
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-sm-8">
+                      <h5 class="text-center">Crear Portfolio</h5>
 
+
+                         
+                      <div class="input-group mb-3">
+                          <label for="inputCEmpresa" class="col-sm-2 col-form-label mx-2">Empresa</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCEmpresa">
+                          </div>
+                        </div>
 
                            
+                      <div class="input-group mb-3">
+                          <label for="inputCEsTrActual" class="col-sm-2 col-form-label mx-2">¿Trabajas Actualmente ahi?</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCEsTrActual">
+                          </div>
+                        </div>
+
+
                         <div class="input-group mb-3">
-                            <label for="inputEmpresa" class="col-sm-2 col-form-label mx-2">Empresa</label>
-                            <div class="col-sm-10 w-75">
-                              <input type="text" class="form-control" id="inputEmpresa">
-                            </div>
+                          <label for="inputCInicio" class="col-sm-2 col-form-label mx-2">Inicio</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCInicio">
                           </div>
+                        </div>
 
-                             
+
+
                         <div class="input-group mb-3">
-                            <label for="inputEsTrActual" class="col-sm-2 col-form-label mx-2">¿Trabajas Actualmente ahi?</label>
-                            <div class="col-sm-10 w-75">
-                              <input type="text" class="form-control" id="inputEsTrActual">
-                            </div>
+                          <label for="inputCFin" class="col-sm-2 col-form-label mx-2">Fin</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCFin">
                           </div>
+                        </div>
 
-
-                          <div class="input-group mb-3">
-                            <label for="inputInicio" class="col-sm-2 col-form-label mx-2">Inicio</label>
-                            <div class="col-sm-10 w-75">
-                              <input type="text" class="form-control" id="inputInicio">
-                            </div>
-                          </div>
-
-
-
-                          <div class="input-group mb-3">
-                            <label for="inputFin" class="col-sm-2 col-form-label mx-2">Fin</label>
-                            <div class="col-sm-10 w-75">
-                              <input type="text" class="form-control" id="inputFin">
-                            </div>
-                          </div>
-
-                          <div class="input-group mb-3">
-                            <label for="inputDesc" class="col-sm-2 col-form-label mx-2">Descripcion</label>
-                            <div class="col-sm-10 w-75">
-                              <input type="text" class="form-control" id="inputDesc">
-                            </div>
-                          </div>
-
-                        
                         <div class="input-group mb-3">
-                            <label for="inputDireUrl" class="col-sm-2 col-form-label mx-2">Direccion URL</label>
-                            <div class="col-sm-10 w-75">
-                              <input type="text" class="form-control" id="inputDireUrl">
-                            </div>
+                          <label for="inputCDesc" class="col-sm-2 col-form-label mx-2">Descripcion</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCDesc">
                           </div>
+                        </div>
 
-
-                          <div class="input-group mb-3">
-                            <input type="file" class="form-control" id="inputGroupFile02">
-                            <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
+                      
+                      <div class="input-group mb-3">
+                          <label for="inputCDireUrl" class="col-sm-2 col-form-label mx-2">Direccion URL</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCDireUrl">
                           </div>
+                        </div>
 
-                       
+
+                        <div class="input-group mb-3">
+                          <input type="file" class="form-control" id="inputCGroupFile">
+                          <label class="input-group-text" for="inputCGroupFile">Subir Imagen JPG</label>
+                        </div>
+
+                     
 
 
-                          <div class="input-group mb-3  ">
-                            <label for="inputStack" class="col-sm-2 col-form-label mx-2">stackusado</label>
-                            <div class="col-sm-10 w-75 ">
-                              <input type="text" class="form-control " id="inputStack">
-                            </div>
+                        <div class="input-group mb-3  ">
+                          <label for="inputCStack" class="col-sm-2 col-form-label mx-2">stackusado</label>
+                          <div class="col-sm-10 w-75 ">
+                            <input type="text" class="form-control " id="inputCStack">
                           </div>
-                    
-                    </div>
-                    <div class="col-sm-4">
-                       
-                    
-                    </div>
-                </div>
-             
-             
-              
-      
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-warning text-light">Guardar</button>
+                        </div>
+                  
+                  </div>
+                  <div class="col-sm-4">
+                     
+                  
+                  </div>
+              </div>
            
-              <button type="button" class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button>
-
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            </div>
            
+            
+    
           </div>
-          
-    </div>
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-outline-success">Guardar</button>
+         
+            <!-- <button type="button" class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button> -->
+
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+         
+        </div>
+        
+  </div>
 
 
-  </div> 
+</div> 
