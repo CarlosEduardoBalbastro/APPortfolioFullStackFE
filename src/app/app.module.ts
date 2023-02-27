@@ -27,6 +27,10 @@ import { ModalFormacionComponent } from './componentes/modal-formacion/modal-for
 import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal-habilidades.component';
 import { ModalPortfolioComponent } from './componentes/modal-portfolio/modal-portfolio.component';
 import { ModalIdiomaComponent } from './componentes/modal-idioma/modal-idioma.component';
+import { IdiomaComponent } from './componentes/idioma/idioma.component';
+import { IdiomaAddComponent } from './componentes/idioma-add/idioma-add.component';
+import { IdiomaDelComponent } from './componentes/idioma-del/idioma-del.component';
+import { IdiomEditComponent } from './componentes/idiom-edit/idiom-edit.component';
 
 
 @NgModule({
@@ -54,6 +58,10 @@ import { ModalIdiomaComponent } from './componentes/modal-idioma/modal-idioma.co
     ModalHabilidadesComponent,
     ModalPortfolioComponent,
     ModalIdiomaComponent,
+    IdiomaComponent,
+    IdiomaAddComponent,
+    IdiomaDelComponent,
+    IdiomEditComponent,
     
   ],
   imports: [

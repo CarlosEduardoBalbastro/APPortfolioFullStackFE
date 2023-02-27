@@ -3,13 +3,17 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Habilidades } from '../model/habilidades';
 
+
+
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class HabilidadService {
 
 
-  url = "http://localhost:8080/habilidades/";
+   url = "http://localhost:8080/habilidades/";
 
   constructor(private httpClient:HttpClient) { }
 

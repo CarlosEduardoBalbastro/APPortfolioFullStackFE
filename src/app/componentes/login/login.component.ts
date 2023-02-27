@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit {
       
     })
     
-    this.rutas.navigate(['/portfolio']);
+    this.rutas.navigate(['']);
     
     if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor

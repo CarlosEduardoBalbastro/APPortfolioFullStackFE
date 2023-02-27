@@ -26,8 +26,8 @@ export class IdiomaService {
     return this.httpClient.post<any>(this.url + 'crear', Idioma);
   }
 
-  public update(id: number, Idioma: Idioma):Observable<any>{
-    return this.httpClient.put<any>(this.url + `editar/${id}` , Idioma);
+  public update(id: any, Idioma: any):Observable<any>{
+    return this.httpClient.put(this.url + `editar/${id}`, Idioma);
   }
 
 

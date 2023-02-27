@@ -1,4 +1,6 @@
+import { group } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Experiencia } from 'src/app/model/experiencia';
 import { Habilidades } from 'src/app/model/habilidades';
 import { Idioma } from 'src/app/model/idioma';
@@ -14,20 +16,40 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class HabilidadesComponent implements OnInit {
 
-  miExperiencia:any;
-  miIdioma:any;
-  miHabilidad:any;
-  idiomas: Idioma[]=[]; //sellama al modelo que es un array
+  formHabilidad: FormGroup;
+  
+  tecnologia: '' = "";
+  porcentaje!: number;
+  color: '' = "";
+  imagen: '' = "";
+  //miExperiencia:any;
+  //miIdioma:any;
+ // miHabilidad:any;
+ 
   experiencias: Experiencia[]=[];
   habilidades: Habilidades[]=[];
-  constructor(private datosPortfolio:PortfolioService, private sIdioma:IdiomaService, private sExperiencia:ExperienciaService, private sHabilidad:HabilidadService) { }
+  constructor(private formBuilder:FormBuilder, private sExperiencia:ExperienciaService, private sHabilidad:HabilidadService) {
 
+
+    this.formHabilidad= this.formBuilder.group({
+      tecnologia:[''],
+  porcentaje:[''],
+  color: [''],
+  imagen: ['']
+    })
+
+
+ 
+
+   }
+
+  
   ngOnInit(): void {
 
   
-this.createIdioma();
+
 this.crearExperiencia();
-this.crearHabilidad();
+this.traerHabilidad();
 // this.datosPortfolio.obtenerExperiencia().subscribe(data => {
 //   this.miExperiencia=data.experiencias;
 // }),
@@ -44,16 +66,19 @@ this.crearHabilidad();
 
   }
 
-  crearHabilidad():void{
-    this.sHabilidad.traerHabilidades().subscribe(data => {
-      this.habilidades=data;
-    })
-  }
 
+
+ 
   borrarHabilidad(id:number){
-    this.sHabilidad.eliminarHabilidad(id).subscribe(data => {
-      this.borrarHabilidad;
-    })
+
+    if(id != undefined){
+      this.sHabilidad.eliminarHabilidad(id).subscribe(data => {
+        this.borrarHabilidad;
+      }, err => {
+        alert("habilidad eliminada, actualizar para ver cambios");
+      })
+    }
+ 
   }
 
   traerHabilidad():void{
@@ -62,21 +87,24 @@ this.crearHabilidad();
     })
   }
 
-  createIdioma():void{
-    this.sIdioma.lista().subscribe(data => {this.idiomas=data});
-  }
 
-  borrarIdioma(id:number){
 
-    if(id != undefined){
-      this.sIdioma.borrar(id).subscribe(data =>{
-        this.borrarIdioma;
-      }, err => {
-        alert("No se pudo cargar el idioma");
-      } )
-    }
-    
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -98,6 +126,19 @@ this.crearHabilidad();
       this.experiencias = data;
     })
   }
+
+
+  // onEnviarIdioma(event: Event){
+   
+  //   event.preventDefault; 
+ 
+  // if(this.formIdioma.valid){
+  //   this.onCreateI();
+  // }else{
+  //   alert('sarasasasa');
+  //   this.formIdioma.markAllAsTouched();
+  // }
+  // }
 
 }
 
