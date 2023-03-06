@@ -16,26 +16,49 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class HabilidadesComponent implements OnInit {
 
-  formHabilidad: FormGroup;
+  formHabilidadUD: FormGroup;
   
   tecnologia: '' = "";
   porcentaje!: number;
   color: '' = "";
   imagen: '' = "";
+
+  formExperienciaUD: FormGroup;
+  
+  empresaExp: '' = "";
+  estrabajoactual!: boolean;
+  inicio: '' = "";
+  fin: '' = "";
+  descripcion: '' = "";
+  direccion: '' = "" ;
+  imagenExp: '' = "";
+  stackusado: '' =  "";
   //miExperiencia:any;
   //miIdioma:any;
  // miHabilidad:any;
+ 
  
   experiencias: Experiencia[]=[];
   habilidades: Habilidades[]=[];
   constructor(private formBuilder:FormBuilder, private sExperiencia:ExperienciaService, private sHabilidad:HabilidadService) {
 
 
-    this.formHabilidad= this.formBuilder.group({
+    this.formHabilidadUD= this.formBuilder.group({
       tecnologia:[''],
   porcentaje:[''],
   color: [''],
   imagen: ['']
+    });
+
+    this.formExperienciaUD=this.formBuilder.group({
+      empresaExp: [''],
+      estrabajoactual: [''],
+      inicio: [''],
+      fin: [''],
+      descripcion: [''], 
+      direccion: [''],
+      imagenExp: [''],
+      stackusado: ['']
     })
 
 
@@ -48,7 +71,7 @@ export class HabilidadesComponent implements OnInit {
 
   
 
-this.crearExperiencia();
+this.traerExperiencia();
 this.traerHabilidad();
 // this.datosPortfolio.obtenerExperiencia().subscribe(data => {
 //   this.miExperiencia=data.experiencias;
@@ -92,23 +115,6 @@ this.traerHabilidad();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   traerExperiencia():void{
     this.sExperiencia.traer().subscribe(data => {
       this.experiencias=data
@@ -116,16 +122,17 @@ this.traerHabilidad();
   }
 
   borrarExperiencia(id:number):void{
-    this.sExperiencia.borrar(id).subscribe(data =>{
-      this.traerExperiencia;
-    })
+  
+    if(id != undefined){
+      this.sExperiencia.borrar(id).subscribe(data => {
+        this.borrarExperiencia;
+      }, err => {
+        alert("Experiencia eliminada, actualizar para ver cambios");
+      })
+    }
   }
 
-  crearExperiencia():void{
-    this.sExperiencia.traer().subscribe(data => {
-      this.experiencias = data;
-    })
-  }
+
 
 
   // onEnviarIdioma(event: Event){

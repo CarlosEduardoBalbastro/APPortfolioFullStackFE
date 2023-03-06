@@ -2,6 +2,7 @@
  <div class="modal fade" id="crearPortfolio" tabindex="-1" aria-labelledby="modalToggleCrearExperiencia" aria-hidden="true">
           
   <div class="modal-dialog modal-lg">
+    <form [formGroup]=" formExperienciaCreate">
       <div class="modal-content ">
          
           <div class="modal-header">
@@ -18,7 +19,7 @@
                       <div class="input-group mb-3">
                           <label for="inputCEmpresa" class="col-sm-2 col-form-label mx-2">Empresa</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCEmpresa">
+                            <input type="text" class="form-control" id="inputCEmpresa" formControlName="empresaExp" [(ngModel)]="empresaExp">
                           </div>
                         </div>
 
@@ -26,31 +27,31 @@
                       <div class="input-group mb-3">
                           <label for="inputCEsTrActual" class="col-sm-2 col-form-label mx-2">¿Trabajas Actualmente ahi?</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCEsTrActual">
+                            <input type="text" class="form-control" id="inputCEsTrActual" formControlName="estrabajoactual" [(ngModel)]="estrabajoactual" >
                           </div>
                         </div>
 
 
                         <div class="input-group mb-3">
-                          <label for="inputCInicio" class="col-sm-2 col-form-label mx-2">Inicio</label>
+                          <label for="inputCInicioExp" class="col-sm-2 col-form-label mx-2">Inicio</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCInicio">
+                            <input type="text" class="form-control" id="inputCInicioExp" formControlName="inicio" [(ngModel)]="inicio">
                           </div>
                         </div>
 
 
 
                         <div class="input-group mb-3">
-                          <label for="inputCFin" class="col-sm-2 col-form-label mx-2">Fin</label>
+                          <label for="inputCFinExp" class="col-sm-2 col-form-label mx-2">Fin</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCFin">
+                            <input type="text" class="form-control" id="inputCFinExp" formControlName="fin" [(ngModel)]="fin">
                           </div>
                         </div>
 
                         <div class="input-group mb-3">
                           <label for="inputCDesc" class="col-sm-2 col-form-label mx-2">Descripcion</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCDesc">
+                            <input type="text" class="form-control" id="inputCDesc" formControlName="descripcion" [(ngModel)]="descripcion">
                           </div>
                         </div>
 
@@ -58,23 +59,29 @@
                       <div class="input-group mb-3">
                           <label for="inputCDireUrl" class="col-sm-2 col-form-label mx-2">Direccion URL</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCDireUrl">
+                            <input type="text" class="form-control" id="inputCDireUrl" formControlName="direccion" [(ngModel)]="direccion">
                           </div>
                         </div>
 
 
-                        <div class="input-group mb-3">
-                          <input type="file" class="form-control" id="inputCGroupFile">
+                        <!-- <div class="input-group mb-3">
+                          <input type="file" class="form-control" id="inputCGroupFile" formControlName="imagenExp" [(ngModel)]="imagenExp">
                           <label class="input-group-text" for="inputCGroupFile">Subir Imagen JPG</label>
-                        </div>
+                        </div> -->
 
+                        <div class="input-group mb-3">
+                          <label for="inputCGruopFileJPG" class="col-sm-2 col-form-label mx-2">Imagen</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCGruopFileJPG" formControlName="imagenExp" [(ngModel)]="imagenExp">
+                          </div>
+                        </div>
                      
 
 
                         <div class="input-group mb-3  ">
-                          <label for="inputCStack" class="col-sm-2 col-form-label mx-2">stackusado</label>
+                          <label for="inputCStack" class="col-sm-2 col-form-label mx-2">Stackusado</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputCStack">
+                            <input type="text" class="form-control " id="inputCStack" formControlName="stackusado" [(ngModel)]="stackusado">
                           </div>
                         </div>
                   
@@ -90,7 +97,7 @@
     
           </div>
           <div class="modal-footer">
-              <button type="submit" class="btn btn-outline-success">Guardar</button>
+              <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="crearExperiencia()">Guardar</button>
          
             <!-- <button type="button" class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button> -->
 
@@ -98,7 +105,7 @@
           </div>
          
         </div>
-        
+      </form>
   </div>
 
 

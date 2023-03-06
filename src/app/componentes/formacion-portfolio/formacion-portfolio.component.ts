@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Formacion } from 'src/app/model/formacion';
 import { FormacionService } from 'src/app/servicios/formacion.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
@@ -10,9 +11,31 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class FormacionPortfolioComponent implements OnInit {
 
-  miEducacion:any;
+  formFormacionUD:FormGroup;
+
+  institucion: '' = "";
+  imagen: '' = "";
+ curso: '' = "";
+ puntaje!:number;
+ inicio: '' = "";
+  fin: '' = "";
+ horas_duracion: '' = "";
+  //miEducacion:any;
   formacion: Formacion[]=[];
-  constructor(private datosPortfolio:PortfolioService, private sFormacion:FormacionService) { }
+
+  constructor(private formBuild:FormBuilder, private sFormacion:FormacionService) {
+
+    this.formFormacionUD= this.formBuild.group({
+      institucion:[''],
+      imagen:[],
+      curso:[],
+      puntaje:[''],
+      inicio:[''],
+      fin:[''],
+      horas_duracion:['']
+    })
+
+   }
 
   ngOnInit(): void {
 
@@ -34,15 +57,11 @@ export class FormacionPortfolioComponent implements OnInit {
 
   }
 
-  crearFormacion():void{
-    this.sFormacion.traerFormacion().subscribe(data  => {
-      this.formacion=data;
-    })
-  }
 
-  borrarFormacion(id:number):void{
+
+  borrarForm(id:number):void{
       this.sFormacion.borrarFormacion(id).subscribe(data => {
-        this.borrarFormacion;
+        this.borrarForm;
       })
   }
 

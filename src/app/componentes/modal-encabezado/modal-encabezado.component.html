@@ -1,171 +1,175 @@
-<div class="modal fade" id="editarInfoPersona" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+  <!-- modal creaer persona -->
+
+  <div class="modal fade" id="crearInfoPersona" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
           
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content ">
-       
-        <div class="modal-header">
-    
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="row">
-                <div class="col-sm-8">
-                    <h5 class="text-center">Editar Informacion Personal</h5>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content ">
 
-
-                       
-                    <div class="input-group mb-3">
-                        <label for="inputNombre" class="col-sm-2 col-form-label mx-2">Nombre</label>
-                        <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputNombre">
-                        </div>
-                      </div>
-
-                         
-                    <div class="input-group mb-3">
-                        <label for="inputApelle" class="col-sm-2 col-form-label mx-2">Apellido</label>
-                        <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputApelle">
-                        </div>
-                      </div>
-
-
-                      <div class="input-group mb-3">
-                        <label for="inputDomicilio" class="col-sm-2 col-form-label mx-2">Domicilio</label>
-                        <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputDomicilio">
-                        </div>
-                      </div>
-
-
-
-                      <div class="input-group mb-3">
-                        <label for="inputNacionalidad" class="col-sm-2 col-form-label mx-2">Nacionalidad</label>
-                        <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputNacionalidad">
-                        </div>
-                      </div>
-
-                      <div class="input-group mb-3">
-                        <label for="inputLugNac" class="col-sm-2 col-form-label mx-2">Lugar Nacimiento</label>
-                        <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputLugNac">
-                        </div>
-                      </div>
-
-                    
-                    <div class="input-group mb-3">
-                        <label for="inputLugRes" class="col-sm-2 col-form-label mx-2">Lugar Residencia</label>
-                        <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputLugRes">
-                        </div>
-                      </div>
-
-
-                      <div class="input-group mb-3">
-                        <label for="inputFechNac" class="col-sm-2 col-form-label mx-2">Fecha Nacimiento</label>
-                        <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputFechNac">
-                        </div>
-                      </div>
-
-
-                      <div class="input-group mb-3">
-                        <label for="inputEmail" class="col-sm-2 col-form-label mx-2">Correo Electronico</label>
-                        <div class="col-sm-10 w-75">
-                          <input type="email" class="form-control" id="inputEmail">
-                        </div>
-                      </div>
-
-
-                      <div class="input-group mb-3">
-                        <label for="inputSobremi">Sobre Mi <small>minimo 24 caracteres por ahora</small></label>
-                        <div class="col-sm-10 w-100" >
-                          <textarea class="form-control" aria-label="Minimo 24 caracteres"></textarea>
-                        </div>
-                        
-                      </div>
-
-
-                      <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFileImg">
-                        <label class="input-group-text" for="inputGroupFileImg">Subir Imagen Perfil</label>
-                      </div>
-
-                      <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFileCV">
-                        <label class="input-group-text" for="inputGroupFileCV">Subir CV PDF</label>
-                      </div>
-                   
-
-
-                      <div class="input-group mb-3  ">
-                        <label for="inputEdad" class="col-sm-2 col-form-label mx-2">Edad</label>
-                        <div class="col-sm-10 w-75 ">
-                          <input type="text" class="form-control " id="inputEdad">
-                        </div>
-                      </div>
-
-                      <div class="input-group mb-3  ">
-                        <label for="inputHijos" class="col-sm-2 col-form-label mx-2">Hijos</label>
-                        <div class="col-sm-10 w-75 ">
-                          <input type="text" class="form-control " id="inputHijos">
-                        </div>
-                      </div>
-
-
-                      <div class="input-group mb-3  ">
-                        <label for="inputEstadoCivil" class="col-sm-2 col-form-label mx-2">Estado Civil</label>
-                        <div class="col-sm-10 w-75 ">
-                          <input type="text" class="form-control " id="inputEstadoCivil">
-                        </div>
-                      </div>
-                
-
-                      <div class="input-group mb-3  ">
-                        <label for="inputEmpresa" class="col-sm-2 col-form-label mx-2">Empresa</label>
-                        <div class="col-sm-10 w-75 ">
-                          <input type="text" class="form-control " id="inputEmpresa">
-                        </div>
-                      </div>
-
-
-                      <div class="input-group mb-3  ">
-                        <label for="inputOcupacion" class="col-sm-2 col-form-label mx-2">Ocupacion</label>
-                        <div class="col-sm-10 w-75 ">
-                          <input type="text" class="form-control " id="inputOcupacion">
-                        </div>
-                      </div>
-
-
-                      <div class="input-group mb-3  ">
-                        <label for="inputArea" class="col-sm-2 col-form-label mx-2">Area</label>
-                        <div class="col-sm-10 w-75 ">
-                          <input type="text" class="form-control " id="inputArea">
-                        </div>
-                      </div>
-
-
-                </div>
-                <div class="col-sm-4">
-                   
-                
-                </div>
-            </div>
+        <form [formGroup]="formPersona">
          
-         
-          
-  
-        </div>
-        <div class="modal-footer">
-            <button type="submit" class="btn btn-outline-success">Guardar</button>
-       
-          <!-- <button type="button" class="btn btn-outline-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button> -->
-
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-       
-      </div>
+          <div class="modal-header">
       
-</div>
-  </div> 
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-sm-8">
+                      <h5 class="text-center">Crear Informacion Persona</h5>
+  
+  
+                         
+                      <div class="input-group mb-3">
+                          <label for="inputcrearNombre" class="col-sm-2 col-form-label mx-2">Nombre</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputcrearNombre" formControlName="nombre" [(ngModel)]="nombre">
+                          </div>
+                        </div>
+  
+                           
+                      <div class="input-group mb-3">
+                          <label for="inputCrearApelle" class="col-sm-2 col-form-label mx-2">Apellido</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCrearApelle" formControlName="apellido" [(ngModel)]="apellido">
+                          </div>
+                        </div>
+  
+  
+                        <div class="input-group mb-3">
+                          <label for="inputCrearDomicilio" class="col-sm-2 col-form-label mx-2">Domicilio</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCrearDomicilio" formControlName="domicilio" [(ngModel)]="domicilio">
+                          </div>
+                        </div>
+  
+  
+  
+                        <div class="input-group mb-3">
+                          <label for="inputCrearNacionalidad" class="col-sm-2 col-form-label mx-2">Nacionalidad</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCrearNacionalidad" formControlName="nacionalidad" [(ngModel)]="nacionalidad">
+                          </div>
+                        </div>
+  
+                        <div class="input-group mb-3">
+                          <label for="inputCrearLugNac" class="col-sm-2 col-form-label mx-2">Lugar Nacimiento</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCrearLugNac" formControlName="lugarNacimiento" [(ngModel)]="lugarNacimiento">
+                          </div>
+                        </div>
+  
+                      
+                      <div class="input-group mb-3">
+                          <label for="inputCLugRes" class="col-sm-2 col-form-label mx-2">Lugar Residencia</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCLugRes" formControlName="lugarResidencia" [(ngModel)]="lugarResidencia">
+                          </div>
+                        </div>
+  
+  
+                        <div class="input-group mb-3">
+                          <label for="inputCFechNac" class="col-sm-2 col-form-label mx-2">Fecha Nacimiento</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="text" class="form-control" id="inputCFechNac" formControlName="fechaNac" [(ngModel)]="fechaNac">
+                          </div>
+                        </div>
+  
+  
+                        <div class="input-group mb-3">
+                          <label for="inputCEmail" class="col-sm-2 col-form-label mx-2">Correo Electronico</label>
+                          <div class="col-sm-10 w-75">
+                            <input type="email" class="form-control" id="inputCEmail" formControlName="correo" [(ngModel)]="correo">
+                          </div>
+                        </div>
+  
+  
+                        <div class="input-group mb-3">
+                          <label for="inputCSobremi">Sobre Mi <small>minimo 24 caracteres por ahora</small></label>
+                          <div class="col-sm-10 w-100" >
+                            <textarea class="form-control" id="inputCSobremi"  aria-label="Minimo 42 caracteres" formControlName="sobreMi" [(ngModel)]="sobreMi"></textarea>
+                          </div>
+                          
+                        </div>
+  
+  
+                        <div class="input-group mb-3">
+                          <input type="file" class="form-control" id="inputGroupFileImg" formControlName="imagen" [(ngModel)]="imagen">
+                          <label class="input-group-text" for="inputGroupFileImg">Subir Imagen Perfil</label>
+                        </div>
+  
+                        <div class="input-group mb-3">
+                          <input type="file" class="form-control" id="inputGroupFileCV" formControlName="cv" [(ngModel)]="cv">
+                          <label class="input-group-text" for="inputGroupFileCV">Subir CV PDF</label>
+                        </div>
+                     
+  
+  
+                        <div class="input-group mb-3  ">
+                          <label for="inputCEdad" class="col-sm-2 col-form-label mx-2">Edad</label>
+                          <div class="col-sm-10 w-75 ">
+                            <input type="text" class="form-control " id="inputCEdad" formControlName="edad" [(ngModel)]="edad">
+                          </div>
+                        </div>
+  
+                        <div class="input-group mb-3  ">
+                          <label for="inputCHijos" class="col-sm-2 col-form-label mx-2">Hijos</label>
+                          <div class="col-sm-10 w-75 ">
+                            <input type="text" class="form-control " id="inputCHijos" formControlName="hijos" [(ngModel)]="hijos">
+                          </div>
+                        </div>
+  
+  
+                        <div class="input-group mb-3  ">
+                          <label for="inputCEstadoCivil" class="col-sm-2 col-form-label mx-2">Estado Civil</label>
+                          <div class="col-sm-10 w-75 ">
+                            <input type="text" class="form-control " id="inputCEstadoCivil" formControlName="estadoCivil" [(ngModel)]="estadoCivil">
+                          </div>
+                        </div>
+                  
+  
+                        <div class="input-group mb-3  ">
+                          <label for="inputCrearEmpresa" class="col-sm-2 col-form-label mx-2">Empresa</label>
+                          <div class="col-sm-10 w-75 ">
+                            <input type="text" class="form-control " id="inputCrearEmpresa" formControlName="empresa" [(ngModel)]="empresa">
+                          </div>
+                        </div>
+  
+  
+                        <div class="input-group mb-3  ">
+                          <label for="inputCOcupacion" class="col-sm-2 col-form-label mx-2">Ocupacion</label>
+                          <div class="col-sm-10 w-75 ">
+                            <input type="text" class="form-control " id="inputCOcupacion" formControlName="ocupacion" [(ngModel)]="ocupacion">
+                          </div>
+                        </div>
+  
+  
+                        <div class="input-group mb-3  ">
+                          <label for="inputCArea" class="col-sm-2 col-form-label mx-2">Area</label>
+                          <div class="col-sm-10 w-75 ">
+                            <input type="text" class="form-control " id="inputCArea" formControlName="area" [(ngModel)]="area">
+                          </div>
+                        </div>
+  
+  
+                  </div>
+                  <div class="col-sm-4">
+                     
+                  
+                  </div>
+              </div>
+           
+           
+            
+    
+          </div>
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="onCreatePers()">Guardar</button>
+         
+            <!-- <button type="button" class="btn btn-outline-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button> -->
+  
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </form>
+        </div>
+        
+  </div>
+    </div> 
