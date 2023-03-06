@@ -13,7 +13,7 @@ export class EncabezadoComponent implements OnInit {
 
   personas: Persona[]=[];
 
-  formPersona:FormGroup;
+  formPersonaUD:FormGroup;
   nombre:'' = "";
 apellido:'' = "";
 domicilio:'' = "";
@@ -36,7 +36,7 @@ area:'' = "";
   //miPortfolio:any;
   constructor(private formB:FormBuilder, private sPersona:PersonaService) {
 
-this.formPersona = this.formB.group({
+this.formPersonaUD = this.formB.group({
   nombre:[''],
   apellido:[''],
 domicilio:[''],
@@ -72,11 +72,7 @@ area:[''],
 
   }
 
-  crearPersona( pe: Persona):void{
-    this.sPersona.crearPersona(pe).subscribe(data => {
-      this.personas=data;
-    });
-  }
+
 
   traerPersona():void{
     this.sPersona.obtenerPersona().subscribe(data => {
@@ -97,13 +93,5 @@ this.personas= data;
   }
 
 
-  onCreatePers():void{
-
-    const pers = new Persona(this.nombre, this.apellido, this.domicilio,this.nacionalidad, this.lugarNacimiento, this.lugarResidencia, this.fechaNac, this.correo, this.sobreMi, this.imagen, this.cv, this.edad, this.hijos, this.estadoCivil, this.empresa, this.ocupacion, this.area);
-    this.sPersona.crearPersona(pers).subscribe(data => {
-      alert("La persona fue creada este boton funciona");
-    window.location.reload();
-    })
-  }
   
 }

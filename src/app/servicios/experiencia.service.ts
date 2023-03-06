@@ -8,27 +8,27 @@ import { Experiencia } from '../model/experiencia';
 })
 export class ExperienciaService {
 
-  urlServ = 'http://localhost:8080/experiencias/'
+  url = 'http://localhost:8080/experiencias/'
 
   constructor(private httpClient:HttpClient) { }
 
 public traer():Observable<Experiencia[]>{
-          return this.httpClient.get<Experiencia[]>(this.urlServ + 'traer')
+          return this.httpClient.get<Experiencia[]>(this.url + 'traer')
 }
 
 
 public crearExp(Experiencia: Experiencia):Observable<any>{
-return this.httpClient.post<any>(this.urlServ + 'crear', Experiencia);
+return this.httpClient.post<any>(this.url + 'crear', Experiencia);
 }
 
 
 public borrar(id:number):Observable<any>{
-  return this.httpClient.delete<any>(this.urlServ + `borrar/${id}`);
+  return this.httpClient.delete<any>(this.url + `borrar/${id}`);
 }
 
 
 public editarExperiencia(id: number, Experiencia: Experiencia):Observable<any>{
-  return this.httpClient.put<any>(this.urlServ + `editar/${id}` , Experiencia);
+  return this.httpClient.put<any>(this.url + `editar/${id}` , Experiencia);
 }
 
 }

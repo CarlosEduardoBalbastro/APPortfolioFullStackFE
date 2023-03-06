@@ -11,7 +11,7 @@ import { IdiomaService } from 'src/app/servicios/idioma.service';
 })
 export class IdiomaComponent implements OnInit {
 
-  formIdioma: FormGroup;
+  formIdiomaUD: FormGroup;
   lengua: '' = "";
   nivel: '' = "";
 
@@ -21,7 +21,7 @@ export class IdiomaComponent implements OnInit {
   idiomas: Idioma[]=[]; //sellama al modelo que es un array
   constructor(private formBuilder:FormBuilder, private sIdioma:IdiomaService ) { 
        //crear grupo de controles para formulario
-  this.formIdioma= this.formBuilder.group({
+  this.formIdiomaUD= this.formBuilder.group({
     lengua:[''],
     nivel:['']
   })
