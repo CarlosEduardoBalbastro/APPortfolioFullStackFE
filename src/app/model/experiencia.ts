@@ -6,18 +6,18 @@ export class Experiencia {
     fin: string;
     descripcion:string;
     direccion:string;
-    imagenExp:string;
+    imagen:string;
     stackusado:string;
 
 
-constructor(empresaExp:string, estrabajoactual:boolean, inicio:string, fin:string, descripcion:string,direccion:string, imagenExp:string, stackusado:string){
+constructor(empresaExp:string, estrabajoactual:boolean, inicio:string, fin:string, descripcion:string,direccion:string, imagen:string, stackusado:string){
     this.empresaExp = empresaExp;
     this.estrabajoactual = estrabajoactual;
     this.inicio = inicio;
     this.fin = fin;
     this.descripcion = descripcion;
     this.direccion = direccion;
-    this.imagenExp = imagenExp;
+    this.imagen = imagen;
     this.stackusado = stackusado; 
 }
 

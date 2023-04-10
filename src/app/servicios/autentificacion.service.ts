@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class AutentificacionService {
 
-  url= "http://localhost:4200";
+  url= "http://localhost:8080/usuario/traer";
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http:HttpClient) {
@@ -21,7 +21,7 @@ export class AutentificacionService {
    //metodo iniciar sesion
    IniciarSesion(credenciales:any):Observable<any>
    {
-    return this.http.post(this.url, credenciales).pipe(map(data=>{
+    return this.http.get(this.url, credenciales).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
 
       return data

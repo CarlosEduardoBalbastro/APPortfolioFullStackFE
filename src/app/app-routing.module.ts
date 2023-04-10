@@ -16,9 +16,9 @@ import { LoginComponent } from './componentes/login/login.component';
 
 const routes: Routes = [
 
-  //{ path: "", component:LoginComponent},
-  {path: "", component:IndexComponent},
- 
+  { path: "", component:LoginComponent},
+  {path: "index", component:IndexComponent},
+ //{path: "", redirectTo:"login", pathMatch:"full"},
   // { path: "",  component: IndexComponent },
   // { path: "navegacion", component:NavegacionComponent},
   // { path: "encabezado", component: EncabezadoComponent},
@@ -27,7 +27,7 @@ const routes: Routes = [
   // { path: "habilidades", component:  HabilidadesComponent},
   // { path: "contacto", component: ContactoComponent},
   // { path:"footer", component: FooterComponent},
-   { path: "login", component: LoginComponent },
+  // { path: "login", component: LoginComponent },
 
 
 

@@ -21,7 +21,7 @@ export class HabilidadesComponent implements OnInit {
   tecnologia: '' = "";
   porcentaje!: number;
   color: '' = "";
-  imagen: '' = "";
+  imagenHab: '' = "";
 
   formExperienciaUD: FormGroup;
   
@@ -31,7 +31,7 @@ export class HabilidadesComponent implements OnInit {
   fin: '' = "";
   descripcion: '' = "";
   direccion: '' = "" ;
-  imagenExp: '' = "";
+  imagen: '' = "";
   stackusado: '' =  "";
   //miExperiencia:any;
   //miIdioma:any;
@@ -47,7 +47,7 @@ export class HabilidadesComponent implements OnInit {
       tecnologia:[''],
   porcentaje:[''],
   color: [''],
-  imagen: ['']
+  imagenHab: ['']
     });
 
     this.formExperienciaUD=this.formBuilder.group({
@@ -57,7 +57,7 @@ export class HabilidadesComponent implements OnInit {
       fin: [''],
       descripcion: [''], 
       direccion: [''],
-      imagenExp: [''],
+      imagen: [''],
       stackusado: ['']
     })
 

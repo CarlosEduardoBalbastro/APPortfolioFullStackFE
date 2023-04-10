@@ -55,12 +55,12 @@ export class LoginComponent implements OnInit {
     //suscribir al metodo iniciar sesion que nos provee 
     //servicio de autentificacion
     this.autentificacionService.IniciarSesion(this.form.value).subscribe(data=> {
-      console.log("DATA: " + JSON.stringify(data));
+       //console.log("DATA: " + JSON.stringify(data));
        
-      
-    })
+       this.rutas.navigate(['/index']);
+     })
     
-    this.rutas.navigate(['']);
+     
     
     if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
