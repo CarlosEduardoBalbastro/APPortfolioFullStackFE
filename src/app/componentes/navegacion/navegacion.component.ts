@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Experiencia } from 'src/app/model/experiencia';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 
 @Component({
@@ -8,14 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavegacionComponent implements OnInit {
 
-
-  constructor() { }
+  experiencias: Experiencia[]=[];
+  constructor(private sExperiencia:ExperienciaService) { }
 
   ngOnInit(): void {
 
- 
+    this.traerExperiencia();
 
 
+  }
+
+
+  traerExperiencia():void{
+    this.sExperiencia.traer().subscribe(data => {
+      this.experiencias=data
+    });
   }
 
   

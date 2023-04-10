@@ -19,7 +19,7 @@ export class ModalPortfolioComponent implements OnInit {
   fin: '' = "";
   descripcion: '' = "";
   direccion: '' = "" ;
-  imagenExp: '' = "";
+  imagen: '' = "";
   stackusado: '' =  "";
 
 
@@ -34,7 +34,7 @@ this.formExperienciaCreate = this.formBuilder.group({
   fin: [''] ,
   descripcion: [''] ,
   direccion: [''] ,
-  imagenExp: [''] ,
+  imagen: [''] ,
   stackusado: [''] 
 })
 
@@ -44,7 +44,7 @@ this.formExperienciaCreate = this.formBuilder.group({
 }
 
   crearExperiencia():void{
-    const exp = new Experiencia(this.empresaExp, this.estrabajoactual, this.inicio, this.fin, this.descripcion, this.direccion, this.imagenExp, this.stackusado);
+    const exp = new Experiencia(this.empresaExp, this.estrabajoactual, this.inicio, this.fin, this.descripcion, this.direccion, this.imagen, this.stackusado);
     
   if (exp != undefined){
     this.sExperiencia.crearExp(exp).subscribe(data => {

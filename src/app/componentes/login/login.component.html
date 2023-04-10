@@ -1,53 +1,71 @@
-<!-- <div class="container m-3 justify-content-center">
-  <h2 class="text-secondary fs-3 text-start">Iniciar Sesion</h2>
-  <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-       
-    <div >
-     <label for="email" class="form-label mt-2">Email </label>
-     <input type="email" formControlName="email" 
-     [ngClass]="{'is-invalid': Mail?.errors && Mail?.touched,
-     'is-valid': !Mail?.errors && Mail?.touched}"    
-     class="form-control" id="exampleFormControlInput1" placeholder="nombre@email.com">
-     <div id="emailHelp" class="form-text">Nunca compartiremos tu email con nadie.</div>
-    </div>
-    
-     <div *ngIf="Mail?.errors  && Mail?.touched">    
-       <p *ngIf="Mail?.hasError('required')" class="error">
-           El email es requerido.
-       </p>
-       <p *ngIf="Mail?.hasError('email')" class="error">
-           El formato del email debe ser válido.
-         </p>
-   </div>
-       
-     
-     <div class="mb-5">
-       <label for="inPutPassword" class="form-label">Password</label>
-       <input type="password" formControlName="password" [class.border-danger]="MailValid" 
-       [ngClass]="{'is-invalid': Password?.errors && Password?.touched,
-       'is-valid': !Password?.errors && Password?.touched}"
-       class="form-control" id="inPutPassword" placeholder="Password">
-     </div>
+<div class="container mt-5 w-100 d-block mx-auto justify-content-center">
 
+<div class="row">
+  <div class="col-sm-6">
+    <a type="button"  href="https://serene-travesseiro-2e63d2.netlify.app/" class="btn text-decoration-none border-0" target="_blank" >
+      <img src="./assets/img/DSC_1958_perfil_CEB.png" class="w-50 rounded-circle mt-0 pt-0  float-sm-none" alt="Carlos Balbastro FrontEnd" width="100">
+    </a>
+    <h2 class="text-secondary fs-3 text-center">Carlos Balbastro</h2>
+    <p class="text-secondary fs-5 text-center">Desarrollador Full Stack</p>
+  
+    
+
+  </div>
+  <div class="col-sm-6">
+    <h2 class="text-secondary fs-3 text-start">Iniciar Sesion</h2>
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+         
+      <div >
+       <label for="email" class="form-label mt-2">Email </label>
+       <input type="email" formControlName="email" 
+       [ngClass]="{'is-invalid': Mail?.errors && Mail?.touched,
+       'is-valid': !Mail?.errors && Mail?.touched}"    
+       class="form-control" id="exampleFormControlInput1" placeholder="nombre@email.com">
+       <div id="emailHelp" class="form-text">Nunca compartiremos tu email con nadie.</div>
+      </div>
       
-<div *ngIf="Password?.errors  && Password?.touched">
- <p *ngIf="Password?.hasError('required')" class="error">
-   El password es requerido.
- </p>
- <p *ngIf="Password?.errors" class="error">
-   El password debe ser de 8 o más caracteres.
- </p>
+       <div *ngIf="Mail?.errors  && Mail?.touched">    
+         <p *ngIf="Mail?.hasError('required')" class="error">
+             El email es requerido.
+         </p>
+         <p *ngIf="Mail?.hasError('email')" class="error">
+             El formato del email debe ser válido.
+           </p>
+     </div>
+         
+       
+       <div class="mb-5">
+         <label for="inPutPassword" class="form-label">Password</label>
+         <input type="password" formControlName="password" [class.border-danger]="MailValid" 
+         [ngClass]="{'is-invalid': Password?.errors && Password?.touched,
+         'is-valid': !Password?.errors && Password?.touched}"
+         class="form-control" id="inPutPassword" placeholder="Password">
+       </div>
+  
+        
+  <div *ngIf="Password?.errors  && Password?.touched">
+   <p *ngIf="Password?.hasError('required')" class="error">
+     El password es requerido.
+   </p>
+   <p *ngIf="Password?.errors" class="error">
+     El password debe ser de 8 o más caracteres.
+   </p>
+  </div>
+     
+       <button type="submit" class="btn btn-warning fw-semibold d-block w-100">Login</button>
+     </form>
+  </div>
 </div>
-   
-     <button type="submit" class="btn btn-warning fw-semibold d-block w-100">Login</button>
-   </form>
-</div> -->
+
+
+ 
+</div>
 
 
 
 
 <!-- Modal -->
-<div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+<!-- <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
             
   <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
     <div class="modal-content">
@@ -101,4 +119,4 @@
       </div>
     </div>
   </div>
-</div> 
+</div>  -->

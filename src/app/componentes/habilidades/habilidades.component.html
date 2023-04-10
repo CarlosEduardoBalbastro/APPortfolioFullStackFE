@@ -1,7 +1,9 @@
 
+
+
 <h1 class="text-center mx-5 border-bottom border-2 py-3">Portfolio
 <!-- plus -->
-      <div class="btn-edit float-end ">
+      <div class="btn-edit float-end visually">
         <a href="#" class="btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#crearPortfolio">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus text-dark" viewBox="0 0 16 16">
             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -11,32 +13,40 @@
 
 </h1>
       
+
+<!-- Crear Experiencia -->
   <app-modal-portfolio></app-modal-portfolio>
 
 <!-- Experiencias -->
-<ul class="list">
-  <li *ngFor="let experiencias of experiencias" class="list-group-item m-5 " >
+<ul class="list list-group-flush">
+  <li *ngFor="let experiencias of experiencias" class="list-group-item border-0 mt-0 px-5 " >
 
     <!-- fecha -->
 
-    <h2 class="blockquote-footer my-2" id="working_progress_foto">{{experiencias.fin}}</h2>
+    <p class="text-secondary  fs-5 fw-semibold mt-5" id="working_progress_foto">{{experiencias.fin}}</p>
 
 
     <!-- Enlace Landpage -->
     
-    <a type="button" [href]="experiencias.direccion" target="_blank" class="btn text-decoration-none border-0 text-dark">
-      {{experiencias.descripcion}} <span class="fw-semibold">{{experiencias.stackusado}}</span> 
+    <a type="button" [href]="experiencias.direccion" target="_blank" class="text-decoration-none text-dark">
+      {{experiencias.descripcion}} | <span class="fw-semibold">{{experiencias.stackusado}}</span> 
     </a> 
 
+    <a [href]="experiencias.direccion" target="_blank" class="text-decoration-none text-dark">
+      <img [src]="experiencias.imagen" class="img-fluid mx-auto d-block w-75 mt-3" [alt]="experiencias.descripcion">
+    </a>
+    
+
+    
 
        <!-- lapiz -->
-       <div class="btn-edit float-end  ">
-        <a href="#" class="btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#editarPortfolio"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
+       <div class="btn-edit float-end visually">
+        <a  class="btn btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#editarPortfolio"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
           <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
         </svg>
       </a>
       <!-- eliminar -->
-      <a  class="btn-right m-3" (click)="borrarExperiencia(experiencias.id)">
+      <a  class="btn btn-right m-3" (click)="borrarExperiencia(experiencias.id)">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3 text-dark" viewBox="0 0 16 16">
           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
         </svg>
@@ -56,7 +66,7 @@
     <h2 class="text-center mt-5  border-bottom border-2 ">Habilidades
 
   <!-- plus -->
-          <div class="btn-edit float-end ">
+          <div class="btn-edit float-end visually">
             <a href="#" class="btn-right text-decoration-none " data-bs-toggle="modal" data-bs-target="#crearHabilidades">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus text-dark" viewBox="0 0 16 16">
                 <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -74,8 +84,8 @@
       <ul class="list mt-5">
         <li *ngFor="let habilidades of habilidades"  class="list-group-item">
           <!-- lapiz -->
-       <div class="btn-edit float-end ">
-        <a href="#" class=" text-decoration-none " data-bs-toggle="modal" data-bs-target="#editardHabilidades"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
+       <div class="btn-edit float-end visually">
+        <a h class="btn text-decoration-none " data-bs-toggle="modal" data-bs-target="#editardHabilidades"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
           <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
         </svg></a>
         <a  class="btn text-decoration-none m-3" (click)="borrarHabilidad(habilidades.id)">
@@ -264,7 +274,7 @@
                       <div class="input-group mb-3">
                         <label for="inputEGruopFileJPG" class="col-sm-2 col-form-label mx-2">Imagen</label>
                         <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputEGruopFileJPG" formControlName="imagenExp" [(ngModel)]="imagenExp">
+                          <input type="text" class="form-control" id="inputEGruopFileJPG" formControlName="imagen" [(ngModel)]="imagen">
                         </div>
                       </div>
 

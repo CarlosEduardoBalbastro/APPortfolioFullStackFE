@@ -1,6 +1,78 @@
   <!-- Header Nombre mas Foto -->
   <div class="container mt-4">
     <div class="row">
+
+
+      <div class="img_pertil col-sm-6">
+
+        <a type="button"  class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#imgPerfil">
+          <img *ngFor="let personas of personas" [src]='personas.imagen' class="w-50 rounded-circle mt-0 pt-0  float-sm-none" alt="Carlos Balbastro FrontEnd" width="100">
+        </a>
+          <!-- boton pencil  -->
+            
+          <!-- <div class="btn-edit  float-end visually-hidden">
+            <a href="#" class="btn-right text-decoration-none " data-bs-toggle="modal" data-bs-target="#dashboardimgperfil"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
+              <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+            </svg></a>
+          </div> -->
+    
+          <!-- <app-modal-cv></app-modal-cv> -->
+          <app-modal-encabezado></app-modal-encabezado>
+            <!-- <app-modal-imgperfil></app-modal-imgperfil> -->
+             
+         
+            
+          
+          <!-- Modal Informacion Personal-->
+    
+          <div class="modal fade" id="imgPerfil" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              
+            <div class="modal-dialog modal-content">
+                <div class="modal-content">
+                   
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-6" id="staticBackdropLabel" *ngFor="let personas of personas"><span class="fw-semibold">{{personas.ocupacion}}</span> {{personas.area}}</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h5>Información Personal</h5>
+                    
+                                <ul *ngFor="let personas of personas">
+                                  <li>Nombre: {{personas.nombre}} {{personas.apellido}}</li>
+                                  <li>Nacionalidad: {{personas.nacionalidad}}</li>
+                                  <li>Lugar de Nacimiento: {{personas.lugarNacimiento}}</li>
+                                  <li>Fecha Nacimiento: {{personas.fechaNac}}</li>
+                                  <li>Estado Civil: {{personas.estadoCivil}}</li>
+                                  <li>Hijos: {{personas.hijos}}</li>
+                                  <li>Ciudad de Residencia: {{personas.lugarResidencia}}</li>
+                                  
+                                </ul>
+                            </div>
+                            <div class="col-sm-4" *ngFor="let personas of personas">
+                               
+                                <img [src]="personas.imagen" class="w-75 rounded-circle mt-0 pt-0 float-sm-start" alt="Carlos Balbastro FrontEnd"> 
+                            </div>
+                        </div>
+                     
+                     
+                      
+              
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                    </div>
+                  </div>
+            </div>
+          </div>    
+        
+    
+    
+          </div>
+
+
       <div class="col-sm-6">
 
         
@@ -21,11 +93,11 @@
          
           <figcaption class="blockquote-footer" *ngFor="let personas of personas"> 
             {{personas.ocupacion}} <cite title="Source Title">{{personas.area}}</cite>
-         <div class="btn-edit float-end mx-3 ">
-          <a href="#" class="btn-right text-decoration-none mx-2" data-bs-toggle="modal" data-bs-target="#editarInfoPersona" alt="crear usuario"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark"  viewBox="0 0 16 16">
+         <div class="btn-edit float-end mx-3 visually">
+          <a  class="btn btn-right text-decoration-none mx-2" data-bs-toggle="modal" data-bs-target="#editarInfoPersona" alt="crear usuario"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark"  viewBox="0 0 16 16">
             <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
           </svg></a>
-          <a  class="btn-right text-decoration-none mx-2" alt="eliminar usuario" (click)="borrarPersona(personas.id)" >
+          <a   class="btn btn-right text-decoration-none mx-2" alt="eliminar usuario" (click)="borrarPersona(personas.id)" >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3  text-dark" viewBox="0 0 16 16">
               <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
             </svg>
@@ -35,44 +107,7 @@
           </figcaption>
           <button type="button" class="mt-5 btn btn-outline-warning" >
             
-
-
-               <!-- modal eliminar persona -->
-  <!-- <div class="modal fade" id="eliminarPersona" aria-hidden="true" aria-labelledby="modalToggleEliminarPersona" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header ">
-          <h1 class="modal-title fs-5" id="modalToggleEliminarPersona">Eliminar</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ¿Seguro Desea Eliminar?
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-danger" type="submit"  data-bs-dismiss="modal" aria-label="Close" >Eliminar</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-            
-            <!-- boton pencil  -->
-        
-        <!-- <div class="btn-edit float-end mx-3 visually-hidden">
-          <a href="#" class="btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#dashboardCV"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark"  viewBox="0 0 16 16">
-            <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-          </svg></a>
-  
-        </div> -->
-
-        <!-- boton delete -->
-                <!-- <a href="#" class="btn-right text-decoration-none visually-hidden">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x text-dark " viewBox="0 0 16 16">
-  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-</svg>
-          </a> -->
-   
-
-            <a class="text-decoration-none text-dark " *ngFor="let personas of personas" [href]="personas.cv" download="CV23_Carlos_Balbastro_FrontEndJR">Descargar <span class="fw-semibold">CV</span></a>
+             <a class="text-decoration-none text-dark " *ngFor="let personas of personas" [href]="personas.cv" download="CV23_Carlos_Balbastro_FrontEndJR">Descargar <span class="fw-semibold">CV</span></a>
           </button>
 
         </figure>
@@ -81,74 +116,7 @@
 
 
 
-      <div class="img_pertil col-sm-6">
-
-    <a type="button"  class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#imgPerfil">
-      <img *ngFor="let personas of personas" [src]='personas.imagen' class="w-50 rounded-circle mt-0 pt-0 float-end float-md-none" alt="Carlos Balbastro FrontEnd" width="100">
-    </a>
-      <!-- boton pencil  -->
-        
-      <!-- <div class="btn-edit  float-end visually-hidden">
-        <a href="#" class="btn-right text-decoration-none " data-bs-toggle="modal" data-bs-target="#dashboardimgperfil"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
-          <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-        </svg></a>
-      </div> -->
-
-      <!-- <app-modal-cv></app-modal-cv> -->
-      <app-modal-encabezado></app-modal-encabezado>
-        <!-- <app-modal-imgperfil></app-modal-imgperfil> -->
-         
-     
-        
       
-      <!-- Modal Informacion Personal-->
-
-      <div class="modal fade" id="imgPerfil" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          
-        <div class="modal-dialog modal-content">
-            <div class="modal-content">
-               
-                <div class="modal-header">
-                  <h1 class="modal-title fs-6" id="staticBackdropLabel" *ngFor="let personas of personas"><span class="fw-semibold">{{personas.ocupacion}}</span> {{personas.area}}</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h5>Información Personal</h5>
-                
-                            <ul *ngFor="let personas of personas">
-                              <li>Nombre: {{personas.nombre}} {{personas.apellido}}</li>
-                              <li>Nacionalidad: {{personas.nacionalidad}}</li>
-                              <li>Lugar de Nacimiento: {{personas.lugarNacimiento}}</li>
-                              <li>Fecha Nacimiento: {{personas.fechaNac}}</li>
-                              <li>Estado Civil: {{personas.estadoCivil}}</li>
-                              <li>Hijos: {{personas.hijos}}</li>
-                              <li>Ciudad de Residencia: {{personas.lugarResidencia}}</li>
-                              
-                            </ul>
-                        </div>
-                        <div class="col-sm-4" *ngFor="let personas of personas">
-                           
-                            <img [src]="personas.imagen" class="w-75 rounded-circle mt-0 pt-0 float-sm-start" alt="Carlos Balbastro FrontEnd"> 
-                        </div>
-                    </div>
-                 
-                 
-                  
-          
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <!-- <button type="button" class="btn btn-primary">Understood</button> -->
-                </div>
-              </div>
-        </div>
-      </div>    
-    
-
-
-      </div>
 
    <!-- sobre mi -->
    <div class="container mt-5" id="sobreMi" *ngFor="let personas of personas">
@@ -360,4 +328,4 @@
 
 
 
-  <app-login></app-login>
+  <!-- <app-login></app-login> -->
