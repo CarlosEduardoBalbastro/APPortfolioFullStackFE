@@ -19,6 +19,7 @@ export class IdiomaComponent implements OnInit {
   
 
   idiomas: Idioma[]=[]; //sellama al modelo que es un array
+  isLogged=false;
   constructor(private formBuilder:FormBuilder, private sIdioma:IdiomaService ) { 
        //crear grupo de controles para formulario
   this.formIdiomaUD= this.formBuilder.group({
