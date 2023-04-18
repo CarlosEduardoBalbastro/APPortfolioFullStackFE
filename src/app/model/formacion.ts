@@ -1,6 +1,6 @@
 export class Formacion {
 
-    id!:number;
+    id!: number;
     institucion:string;
     
     imagen:string;

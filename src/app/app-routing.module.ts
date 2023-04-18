@@ -16,18 +16,16 @@ import { LoginComponent } from './componentes/login/login.component';
 
 const routes: Routes = [
 
-  { path: "", component:LoginComponent},
-  {path: "index", component:IndexComponent},
- //{path: "", redirectTo:"login", pathMatch:"full"},
-  // { path: "",  component: IndexComponent },
-  // { path: "navegacion", component:NavegacionComponent},
-  // { path: "encabezado", component: EncabezadoComponent},
-  // { path: "sobremi", component: SobreMiComponent},
-  // { path: "formacion", component:FormacionPortfolioComponent},
-  // { path: "habilidades", component:  HabilidadesComponent},
-  // { path: "contacto", component: ContactoComponent},
-  // { path:"footer", component: FooterComponent},
-  // { path: "login", component: LoginComponent },
+
+   { path: "",  component: IndexComponent },
+  { path: "navegacion", component:NavegacionComponent},
+   { path: "encabezado", component: EncabezadoComponent},
+ // { path: "sobremi", component: SobreMiComponent},
+   { path: "formacion", component:FormacionPortfolioComponent},
+   { path: "habilidades", component:  HabilidadesComponent},
+   { path: "contacto", component: ContactoComponent},
+   { path:"footer", component: FooterComponent},
+   { path: "login", component: LoginComponent },
 
 
 

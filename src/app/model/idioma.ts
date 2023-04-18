@@ -1,6 +1,6 @@
 export class Idioma {
 
-    id?: any;
+    id!: number;
 lengua: string;
 nivel: string;
 
