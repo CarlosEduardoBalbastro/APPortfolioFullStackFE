@@ -4,7 +4,7 @@
 <h1 class="text-center mx-5 border-bottom border-2 py-3">Portfolio
 
   <!-- plus -->
-      <div class="btn-edit float-end">
+      <div class="btn-edit float-end" *ngIf="isLogged">
         <a href="#" class="btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#crearPortfolio">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus text-dark" viewBox="0 0 16 16">
             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -41,7 +41,7 @@
     
 
        <!-- lapiz -->
-       <div class="btn-edit float-end visually">
+       <div class="btn-edit float-end" *ngIf="isLogged">
         <a   class="btn btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#editarPortfolio"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark" viewBox="0 0 16 16">
           <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
         </svg>
@@ -67,7 +67,7 @@
     <h2 class="text-center mt-5  border-bottom border-2 ">Habilidades
 
   <!-- plus -->
-          <div class="btn-edit float-end visually">
+          <div class="btn-edit float-end" *ngIf="isLogged">
             <a href="#" class="btn-right text-decoration-none " data-bs-toggle="modal" data-bs-target="#crearHabilidades">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus text-dark" viewBox="0 0 16 16">
                 <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -129,7 +129,7 @@
         
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form [formGroup]="formHabilidadUD" >
+            <form [formGroup]="formHabilidadUD" (ngSubmit)="onEnviarHab($event)" >
             <div class="modal-body">
                 <div class="row">
                     <div class="col-sm-8">
@@ -137,11 +137,11 @@
                         <div class="input-group mb-3">
                             <label for="inputEStackTec" class="col-sm-2 col-form-label mx-2">Tecnologias</label>
                             <div class="col-sm-10 w-75 ">
-                              <input type="text" class="form-control " id="inputEStackTec" formControlName="tecnologia" [(ngModel)]="tecnologia">
+                              <input type="text" class="form-control " id="inputEStackTec" formControlName="tecnologia" >
                             </div>
                             <label for="inputEPorcentaje" class="col-sm-2 col-form-label mx-2">Porcentaje</label>
                             <div class="col-sm-10 w-75 ">
-                              <input type="text" class="form-control " id="inputEPorcentaje" formControlName="porcentaje" [(ngModel)]="porcentaje">
+                              <input type="text" class="form-control " id="inputEPorcentaje" formControlName="porcentaje">
                             </div>
                             <!-- <label for="inputEColor" class="col-sm-2 col-form-label mx-2">Color</label>
                             <div class="col-sm-10 w-75 ">
@@ -150,7 +150,7 @@
 
                             <label for="inputImgEHabilidades" class="col-sm-2 col-form-label mx-2">Imagen</label>
                             <div class="col-sm-10 w-75 ">
-                              <input type="text" class="form-control " id="inputImgEHabilidades" formControlName="imagen" [(ngModel)]="imagen">
+                              <input type="text" class="form-control " id="inputImgEHabilidades" formControlName="imagen" >
                             </div>
 
                           
@@ -212,7 +212,7 @@
         
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form [formGroup]="formExperienciaUD">
+            <form [formGroup]="formExperienciaUD"  (ngSubmit)="onEnviarExp($event)">
             <div class="modal-body">
                 <div class="row">
                     <div class="col-sm-8">
@@ -222,7 +222,7 @@
                         <div class="input-group mb-3">
                           <label for="inputEEmpresa" class="col-sm-2 col-form-label mx-2">Empresa</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputEEmpresa" formControlName="empresaExp" [(ngModel)]="empresaExp">
+                            <input type="text" class="form-control" id="inputEEmpresa" formControlName="empresaExp">
                           </div>
                         </div>
 
@@ -230,7 +230,7 @@
                       <div class="input-group mb-3">
                           <label for="inputEEsTrActual" class="col-sm-2 col-form-label mx-2">¿Trabajas Actualmente ahi?</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputEEsTrActual" formControlName="estrabajoactual" [(ngModel)]="estrabajoactual" >
+                            <input type="text" class="form-control" id="inputEEsTrActual" formControlName="estrabajoactual" >
                           </div>
                         </div>
 
@@ -238,7 +238,7 @@
                         <div class="input-group mb-3">
                           <label for="inputEInicioExp" class="col-sm-2 col-form-label mx-2">Inicio</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputEInicioExp" formControlName="inicio" [(ngModel)]="inicio">
+                            <input type="text" class="form-control" id="inputEInicioExp" formControlName="inicio">
                           </div>
                         </div>
 
@@ -247,14 +247,14 @@
                         <div class="input-group mb-3">
                           <label for="inputEFinExp" class="col-sm-2 col-form-label mx-2">Fin</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputEFinExp" formControlName="fin" [(ngModel)]="fin">
+                            <input type="text" class="form-control" id="inputEFinExp" formControlName="fin" >
                           </div>
                         </div>
 
                         <div class="input-group mb-3">
                           <label for="inputEDesc" class="col-sm-2 col-form-label mx-2">Descripcion</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputEDesc" formControlName="descripcion" [(ngModel)]="descripcion">
+                            <input type="text" class="form-control" id="inputEDesc" formControlName="descripcion" >
                           </div>
                         </div>
 
@@ -262,7 +262,7 @@
                       <div class="input-group mb-3">
                           <label for="inputEDireUrl" class="col-sm-2 col-form-label mx-2">Direccion URL</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputEDireUrl" formControlName="direccion" [(ngModel)]="direccion">
+                            <input type="text" class="form-control" id="inputEDireUrl" formControlName="direccion" >
                           </div>
                         </div>
 
@@ -275,7 +275,7 @@
                       <div class="input-group mb-3">
                         <label for="inputEGruopFileJPG" class="col-sm-2 col-form-label mx-2">Imagen</label>
                         <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputEGruopFileJPG" formControlName="imagen" [(ngModel)]="imagen">
+                          <input type="text" class="form-control" id="inputEGruopFileJPG" formControlName="imagen" >
                         </div>
                       </div>
 
@@ -285,7 +285,7 @@
                         <div class="input-group mb-3  ">
                           <label for="inputEStack" class="col-sm-2 col-form-label mx-2">Stackusado</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputEStack" formControlName="stackusado" [(ngModel)]="stackusado">
+                            <input type="text" class="form-control " id="inputEStack" formControlName="stackusado" >
                           </div>
                         </div>
                     

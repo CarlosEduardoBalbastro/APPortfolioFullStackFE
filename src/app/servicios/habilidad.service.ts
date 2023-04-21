@@ -34,5 +34,9 @@ public eliminarHabilidad(id:number):Observable<any>{
   return this.httpClient.delete<any>(this.url + `borrar/${id}`);
 }
 
+public update(Habilidad:Habilidades):Observable <any>{
+  return this.httpClient.put <any>(this.url + 'editar', Habilidad)
+}
+
 
 }

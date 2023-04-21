@@ -3,7 +3,8 @@
     <div class="row">
 
 
-      <div class="img_pertil col-sm-6">
+
+      <div class="img_pertil col-sm-6" >
 
         <a type="button"  class="btn text-decoration-none border-0 text-dark" data-bs-toggle="modal" data-bs-target="#imgPerfil">
           <img *ngFor="let personas of personas" [src]='personas.imagen' class="w-50 rounded-circle mt-0 pt-0  float-sm-none" alt="Carlos Balbastro FrontEnd" width="100">
@@ -78,8 +79,9 @@
         
         <figure class="text-center m-2 mb-0 p-2">
           
-          <blockquote class="blockquote">
-            <div class="btn-edit float-end ">
+          <blockquote class="blockquote" >
+            <!-- plus -->
+            <div class="btn-edit float-end " *ngIf="isLogged">
               <a href="#" class="btn-right text-decoration-none" data-bs-toggle="modal" data-bs-target="#crearInfoPersona">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus text-dark" viewBox="0 0 16 16">
                   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -93,7 +95,9 @@
          
           <figcaption class="blockquote-footer" *ngFor="let personas of personas"> 
             {{personas.ocupacion}} <cite title="Source Title">{{personas.area}}</cite>
-         <div class="btn-edit float-end mx-3 visually">
+
+            <!-- lapiz y trash -->
+         <div class="btn-edit float-end mx-3 " *ngIf="isLogged">
           <a  class="btn btn-right text-decoration-none mx-2" data-bs-toggle="modal" data-bs-target="#editarInfoPersona" alt="crear usuario"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill text-dark"  viewBox="0 0 16 16">
             <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
           </svg></a>
@@ -157,7 +161,7 @@
           
     <div class="modal-dialog modal-lg">
       <div class="modal-content ">
-         <form [formGroup]="formPersonaUD">
+         <form [formGroup]="formPersonaUD" (ngSubmit)="onEnviar($event)">
           <div class="modal-header">
       
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -172,7 +176,7 @@
                       <div class="input-group mb-3">
                           <label for="inputNombre" class="col-sm-2 col-form-label mx-2">Nombre</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputNombre" formControlName="nombre" [(ngModel)]="nombre">
+                            <input type="text" class="form-control" id="inputNombre" formControlName="nombre" >
                           </div>
                         </div>
   
@@ -180,7 +184,7 @@
                       <div class="input-group mb-3">
                           <label for="inputApelle" class="col-sm-2 col-form-label mx-2">Apellido</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputApelle" formControlName="apellido" [(ngModel)]="apellido">
+                            <input type="text" class="form-control" id="inputApelle" formControlName="apellido" >
                           </div>
                         </div>
   
@@ -188,7 +192,7 @@
                         <div class="input-group mb-3">
                           <label for="inputDomicilio" class="col-sm-2 col-form-label mx-2">Domicilio</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputDomicilio" formControlName="domicilio" [(ngModel)]="domicilio">
+                            <input type="text" class="form-control" id="inputDomicilio" formControlName="domicilio" >
                           </div>
                         </div>
   
@@ -197,14 +201,14 @@
                         <div class="input-group mb-3">
                           <label for="inputNacionalidad" class="col-sm-2 col-form-label mx-2">Nacionalidad</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputNacionalidad" formControlName="nacionalidad" [(ngModel)]="nacionalidad">
+                            <input type="text" class="form-control" id="inputNacionalidad" formControlName="nacionalidad">
                           </div>
                         </div>
   
                         <div class="input-group mb-3">
                           <label for="inputLugNac" class="col-sm-2 col-form-label mx-2">Lugar Nacimiento</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputLugNac" formControlName="lugarNacimiento" [(ngModel)]="lugarNacimiento">
+                            <input type="text" class="form-control" id="inputLugNac" formControlName="lugarNacimiento" >
                           </div>
                         </div>
   
@@ -212,7 +216,7 @@
                       <div class="input-group mb-3">
                           <label for="inputLugRes" class="col-sm-2 col-form-label mx-2">Lugar Residencia</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputLugRes" formControlName="lugarResidencia" [(ngModel)]="lugarResidencia">
+                            <input type="text" class="form-control" id="inputLugRes" formControlName="lugarResidencia" >
                           </div>
                         </div>
   
@@ -220,7 +224,7 @@
                         <div class="input-group mb-3">
                           <label for="inputFechNac" class="col-sm-2 col-form-label mx-2">Fecha Nacimiento</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputFechNac" formControlName="fechaNac" [(ngModel)]="fechaNac">
+                            <input type="text" class="form-control" id="inputFechNac" formControlName="fechaNac" >
                           </div>
                         </div>
   
@@ -228,7 +232,7 @@
                         <div class="input-group mb-3">
                           <label for="inputEmail" class="col-sm-2 col-form-label mx-2">Correo Electronico</label>
                           <div class="col-sm-10 w-75">
-                            <input type="email" class="form-control" id="inputEmail" formControlName="correo" [(ngModel)]="correo">
+                            <input type="email" class="form-control" id="inputEmail" formControlName="correo" >
                           </div>
                         </div>
   
@@ -236,19 +240,19 @@
                         <div class="input-group mb-3">
                           <label for="inputSobremi">Sobre Mi <small>minimo 24 caracteres por ahora</small></label>
                           <div class="col-sm-10 w-100" >
-                            <textarea class="form-control" aria-label="Minimo 24 caracteres" formControlName="sobreMi" [(ngModel)]="sobreMi"></textarea>
+                            <textarea class="form-control" aria-label="Minimo 24 caracteres" formControlName="sobreMi" ></textarea>
                           </div>
                           
                         </div>
   
   
                         <div class="input-group mb-3">
-                          <input type="file" class="form-control" id="inputGroupFileImg" formControlName="imagen" [(ngModel)]="imagen">
+                          <input type="file" class="form-control" id="inputGroupFileImg" formControlName="imagen" >
                           <label class="input-group-text" for="inputGroupFileImg">Subir Imagen Perfil</label>
                         </div>
   
                         <div class="input-group mb-3">
-                          <input type="file" class="form-control" id="inputGroupFileCV" formControlName="cv" [(ngModel)]="cv">
+                          <input type="file" class="form-control" id="inputGroupFileCV" formControlName="cv">
                           <label class="input-group-text" for="inputGroupFileCV">Subir CV PDF</label>
                         </div>
                      
@@ -257,14 +261,14 @@
                         <div class="input-group mb-3  ">
                           <label for="inputEdad" class="col-sm-2 col-form-label mx-2">Edad</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputEdad" formControlName="edad" [(ngModel)]="edad">
+                            <input type="text" class="form-control " id="inputEdad" formControlName="edad" >
                           </div>
                         </div>
   
                         <div class="input-group mb-3  ">
                           <label for="inputHijos" class="col-sm-2 col-form-label mx-2">Hijos</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputHijos" formControlName="hijos" [(ngModel)]="hijos">
+                            <input type="text" class="form-control " id="inputHijos" formControlName="hijos" >
                           </div>
                         </div>
   
@@ -272,7 +276,7 @@
                         <div class="input-group mb-3  ">
                           <label for="inputEstadoCivil" class="col-sm-2 col-form-label mx-2">Estado Civil</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputEstadoCivil" formControlName="estadoCivil" [(ngModel)]="estadoCivil">
+                            <input type="text" class="form-control " id="inputEstadoCivil" formControlName="estadoCivil" >
                           </div>
                         </div>
                   
@@ -280,7 +284,7 @@
                         <div class="input-group mb-3  ">
                           <label for="inputEmpresa" class="col-sm-2 col-form-label mx-2">Empresa</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputEmpresa" formControlName="empresa" [(ngModel)]="empresa">
+                            <input type="text" class="form-control " id="inputEmpresa" formControlName="empresa" >
                           </div>
                         </div>
   
@@ -288,7 +292,7 @@
                         <div class="input-group mb-3  ">
                           <label for="inputOcupacion" class="col-sm-2 col-form-label mx-2">Ocupacion</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputOcupacion" formControlName="ocupacion" [(ngModel)]="ocupacion">
+                            <input type="text" class="form-control " id="inputOcupacion" formControlName="ocupacion" >
                           </div>
                         </div>
   
@@ -296,7 +300,7 @@
                         <div class="input-group mb-3  ">
                           <label for="inputArea" class="col-sm-2 col-form-label mx-2">Area</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputArea" formControlName="area" [(ngModel)]="area">
+                            <input type="text" class="form-control " id="inputArea" formControlName="area" >
                           </div>
                         </div>
   

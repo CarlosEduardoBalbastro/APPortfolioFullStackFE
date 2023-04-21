@@ -48,7 +48,7 @@
           
       <div class="modal-dialog modal-lg" >
           <div class="modal-content" >
-             <form [formGroup]="formIdiomaUD">
+             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
               <div class="modal-header">
           
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -60,13 +60,13 @@
                           <div class="input-group mb-3">
                               <label for="inputELengua" class="col-sm-2 col-form-label mx-2">Lengua</label>
                               <div class="col-sm-10 w-75">
-                                <input type="text" class="form-control" id="inputELengua" formControlName="lengua" [(ngModel)]="lengua">
+                                <input type="text" class="form-control" id="inputELengua" formControlName="lengua">
                               </div>
                             </div>
                             <div class="input-group mb-3  ">
                               <label for="inputENivel" class="col-sm-2 col-form-label mx-2">Nivel</label>
                               <div class="col-sm-10 w-75 ">
-                                <input type="text" class="form-control " id="inputENivel" formControlName="nivel" [(ngModel)]="nivel">
+                                <input type="text" class="form-control " id="inputENivel" formControlName="nivel">
                               </div>
                             </div>
                          
@@ -86,7 +86,7 @@
                
                 <button 
                 type="submit" class="btn btn-outline-success" aria-label="Close"
-                  data-bs-dismiss="modal" (click)="onEditarIdioma(idiomas.id)" >
+                  data-bs-dismiss="modal">
                   Guardar {{idiomas.lengua}}
                 </button>
                

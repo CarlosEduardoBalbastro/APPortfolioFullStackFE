@@ -24,12 +24,16 @@ public crearPersona(Person: Persona):Observable<any>{
 }
 
 
-public borrarPersona(id:number):Observable<any>{
-  return this.httpClient.delete<any>(this.url + `borrar/${id}` )
+public borrarPersona(id:number):Observable<Persona>{
+  return this.httpClient.delete<Persona>(this.url + `borrar/${id}` )
 }
 
 public editarPersona(id:number,Person:Persona):Observable<any>{
   return this.httpClient.put<any>(this.url + `editar/${id}`, Person);
+}
+
+public update(Person:Persona): Observable <any>{
+  return this.httpClient.put <any>(this.url + 'editar', Person);
 }
 
 

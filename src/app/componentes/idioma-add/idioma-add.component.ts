@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Idioma } from 'src/app/model/idioma';
 import { IdiomaService } from 'src/app/servicios/idioma.service';
 
@@ -9,39 +10,55 @@ import { IdiomaService } from 'src/app/servicios/idioma.service';
   styleUrls: ['./idioma-add.component.css']
 })
 export class IdiomaAddComponent implements OnInit {
-  formIdioma: FormGroup;
-  lengua: '' = "";
-  nivel: '' = "";
+  form: FormGroup;
+  //lengua: '' = "";
+  //nivel: '' = "";
 
   idiomas: Idioma[]=[]; //sellama al modelo que es un array
 
-  constructor(private formBuilder:FormBuilder, private sIdioma:IdiomaService ) {
+  constructor(private formBuilder:FormBuilder, private sIdioma:IdiomaService, private router:Router ) {
            //crear grupo de controles para formulario
-  this.formIdioma= this.formBuilder.group({
-    lengua:[''],
-    nivel:['']
+  this.form= this.formBuilder.group({
+    lengua:['',[Validators.required]],
+    nivel:['', [Validators.required]],
   })
    }
 
   ngOnInit(): void {
   }
 
+  get Lengua(){
+    return this.form.get("lengua");
+  }
+
+  get Nivel(){
+    return this.form.get("nivel");
+  }
+
 onCreateI():void{
-  const idi= new Idioma(this.lengua, this.nivel);
+
+  this.sIdioma.save(this.form.value).subscribe(data => {
+
+  });
+  
+}
  
-  if(idi != undefined){
+onEnviar(event:Event){
+  event.preventDefault;
+  if(this.form.valid){
+
+    //Metodos
+    this.onCreateI();
+    alert("Idioma Creado");
+    this.router.navigate(['index']);
+  }else {
+    alert("algo ha fallado en la carga");
+    this.form.markAllAsTouched();
+  }
+}
  
-   this.sIdioma.save(idi).subscribe(data => {
- 
-    window.location.reload();
-   }, err => {
-     alert('nuevo idioma agregado');
-     alert('recargar pagina para ver nuevo Idioma')
-   })
- 
- }
-       
+
   }
 
 
-}
+

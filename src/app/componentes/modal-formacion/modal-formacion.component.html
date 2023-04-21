@@ -11,7 +11,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
-        <form [formGroup]="formFormacionCreate">
+        <form [formGroup]="formFormacionCreate" (ngSubmit)="onEnviar($event)">
         <div class="modal-body">
             <div class="row">
                 <div class="col-sm-8">
@@ -22,29 +22,29 @@
                     <div class="input-group mb-3">
                         <label for="inputInstitucion" class="col-sm-2 col-form-label mx-2">Institucion</label>
                         <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputInstitucion" formControlName="institucion" [(ngModel)]="institucion">
+                          <input type="text" class="form-control" id="inputInstitucion" formControlName="institucion" >
                         </div>
                       </div>
 
                       <div class="input-group mb-3">
                         <label for="inputGroupFile02" class="col-sm-2 col-form-label mx-2">Imagen</label>
                         <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputGroupFile02" formControlName="imagen" [(ngModel)]="imagen">
+                          <input type="text" class="form-control" id="inputGroupFile02" formControlName="imagen" >
                         </div>
                       </div>
 
 
-                      <!-- <div class="input-group mb-3">
+                      <div class="input-group mb-3">
                         <input type="file" class="form-control" id="inputGroupFile02">
                         <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
-                      </div> -->
+                      </div>
 
 
                          
                     <div class="input-group mb-3">
                         <label for="inputCurso" class="col-sm-2 col-form-label mx-2">Curso</label>
                         <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputCurso" formControlName="curso" [(ngModel)]="curso">
+                          <input type="text" class="form-control" id="inputCurso" formControlName="curso" >
                         </div>
                       </div>
 
@@ -52,7 +52,7 @@
                       <div class="input-group mb-3">
                         <label for="inputPuntaje" class="col-sm-2 col-form-label mx-2">Puntaje</label>
                         <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputPuntaje" formControlName="puntaje" [(ngModel)]="puntaje">
+                          <input type="text" class="form-control" id="inputPuntaje" formControlName="puntaje" >
                         </div>
                       </div>
 
@@ -60,7 +60,7 @@
                       <div class="input-group mb-3">
                         <label for="inputInicio" class="col-sm-2 col-form-label mx-2">Inicio</label>
                         <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputInicio" formControlName="inicio" [(ngModel)]="inicio">
+                          <input type="text" class="form-control" id="inputInicio" formControlName="inicio" >
                         </div>
                       </div>
 
@@ -69,14 +69,14 @@
                       <div class="input-group mb-3">
                         <label for="inputFin" class="col-sm-2 col-form-label mx-2">Fin</label>
                         <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputFin" formControlName="fin" [(ngModel)]="fin">
+                          <input type="text" class="form-control" id="inputFin" formControlName="fin">
                         </div>
                       </div>
 
                       <div class="input-group mb-3">
                         <label for="inputHsDuracion" class="col-sm-2 col-form-label mx-2">Horas Duracion</label>
                         <div class="col-sm-10 w-75">
-                          <input type="text" class="form-control" id="inputHsDuracion" formControlName="horas_duracion" [(ngModel)]="horas_duracion">
+                          <input type="text" class="form-control" id="inputHsDuracion" formControlName="horas_duracion" >
                         </div>
                       </div>
 
@@ -102,7 +102,7 @@
   
         </div>
         <div class="modal-footer">
-            <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="crearForm()">Guardar</button>
+            <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" >Guardar</button>
        
           <!-- <button type="button" class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button> -->
 
