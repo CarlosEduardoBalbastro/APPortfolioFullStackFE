@@ -22,17 +22,21 @@ export class IdiomaService {
     return this.httpClient.get<Idioma>(this.url + `editar/${id}`);
   }
 
-  public save(Idioma: Idioma):Observable<any>{
-    return this.httpClient.post<any>(this.url + 'crear', Idioma);
+  public save(idioma: Idioma):Observable<any>{
+    return this.httpClient.post<any>(this.url + 'crear', idioma);
   }
 
-  public update(id: any, Idioma: any):Observable<any>{
-    return this.httpClient.put(this.url + `editar/${id}`, Idioma);
+  public update(idioma: Idioma):Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar`, idioma);
+  }
+
+  public edit(id: number, idioma:Idioma): Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, idioma);
   }
 
 
-  public borrar(id:number):Observable<any>{
-    return this.httpClient.delete<any>(this.url + `borrar/${id}`);
+  public borrar(id:number):Observable<Idioma>{
+    return this.httpClient.delete<Idioma>(this.url + `borrar/${id}`);
   }
 
 

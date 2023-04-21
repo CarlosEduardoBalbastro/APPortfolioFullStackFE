@@ -3,7 +3,10 @@ import { Component, OnInit } from '@angular/core';
 // importamos las librerias de formulario que vamos a necesitar
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AutentificacionService } from 'src/app/servicios/autentificacion.service';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 
 @Component({
@@ -14,13 +17,20 @@ import { AutentificacionService } from 'src/app/servicios/autentificacion.servic
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
+  isLogged= false;
+  isLogginFail=false;
+  loginUsuario!: LoginUsuario;
+  nombreUsuario!: string;
+  password!: string;
+  roles:string[]=[];
+  errMsj!: string;
     // Inyectar en el constructor el formBuilder
-  constructor(private formBuilder: FormBuilder, private autentificacionService:AutentificacionService, private rutas:Router) {
+  constructor(private tokenService: TokenService ,private formBuilder: FormBuilder, private autentificacionService: AuthService, private router:Router) {
         ///Creamos el grupo de controles para el formulario de login
         this.form= this.formBuilder.group({
          
-          email:['', [Validators.required, Validators.email]],
-          password:['',[Validators.required, Validators.minLength(8)]],
+          //email:['', [Validators.required, Validators.email]],
+          //password:['',[Validators.required, Validators.minLength(8)]],
           // deviceInfo:this.formBuilder.group({
           //   deviceId: ["123123"],
           //   deviceType: ["DEVICE_TYPE_ANDROID"],
@@ -29,24 +39,55 @@ export class LoginComponent implements OnInit {
        })
    }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+
+if(this.tokenService.getToken()){
+  this.isLogged=true;
+  this.isLogginFail=false;
+  this.roles=this.tokenService.getAuthorities();
+}
+
+   }
 
 
-  get Password(){
-    return this.form.get("password");
-  }
+
+   onLogin(): void {
+    this.loginUsuario= new LoginUsuario(this.nombreUsuario, this.password);
+    this.autentificacionService.login(this.loginUsuario).subscribe(data => {
+      
+      this.isLogged= true;
+      this.isLogginFail=false;
+
+      this.tokenService.setToken(data.token);
+      this.tokenService.setUserName(data.nombreUsuario);
+      this.tokenService.setAuthorities(data.authorities);
+      
+      this.roles = data.authorities;
+      this.router.navigate(['']);
+    }, err => {
+      this.isLogged = false;
+      this.isLogginFail = true;
+      this.errMsj = err.error.mensaje;
+      console.log(this.errMsj);
+    })
+   }
+
+
+  // get Password(){
+  //   return this.form.get("password");
+  // }
  
-  get Mail(){
-   return this.form.get("email");
-  }
+  // get Mail(){
+  //  return this.form.get("email");
+  // }
 
-  get PasswordValid(){
-    return this.Password?.touched && !this.Password?.valid;
-  }
+  // get PasswordValid(){
+  //   return this.Password?.touched && !this.Password?.valid;
+  // }
 
-  get MailValid() {
-    return false
-  }
+  // get MailValid() {
+  //   return false
+  // }
  
 
   onEnviar(event: Event){

@@ -12,15 +12,16 @@ export class ModalHabilidadesComponent implements OnInit {
 
   formHabilidad: FormGroup;
   
-  tecnologia: '' = "";
-  porcentaje!: number;
-  color: '' = "";
-  imagen: '' = "";
+  //tecnologia: '' = "";
+  //porcentaje!: number;
+  //color: '' = "";
+  //imagen: '' = "";
   habilidades: Habilidades[]=[];
   constructor(private formBuilder:FormBuilder, private sHabilidad:HabilidadService) {
 
 
     this.formHabilidad= this.formBuilder.group({
+      //id:[''],
       tecnologia:[''],
   porcentaje:[''],
   color: [''],
@@ -35,20 +36,60 @@ export class ModalHabilidadesComponent implements OnInit {
 
   }
 
+  //metodos para crear Habilidad
+get Tecnologia(){
+  return this.formHabilidad.get("tecnologia");
+}
 
-  crearHabilidad():void{
-    const hab = new Habilidades(this.tecnologia, this.porcentaje, this.color,this.imagen);
+get Porcentaje(){
+  return this.formHabilidad.get("porcentaje");
+}
 
-    if (hab != undefined){
-      this.sHabilidad.crearHabilidad(hab).subscribe(data => {
-        window.location.reload();
-      }, err => {
-        alert('nuevo Habilidad agregado');
-        alert('recargar pagina para ver nuevo Habilidad')
-      })
-    }
+get Color(){
+  return this.formHabilidad.get("color");
+}
+
+get imagenHabi(){
+  return this.formHabilidad.get("imagenHab");
+}
+
+
+
+
+onCreateHab():void{
+
+this.sHabilidad.crearHabilidad(this.formHabilidad.value).subscribe( data => {
+
+})
+
+}
+
+onEnviarHabilidad(event:Event){
+
+event.preventDefault;
+if (this.formHabilidad.valid){
+  this.onCreateHab();
+
+}else{
+  alert("Algo ha fallado en la carga");
+  this.formHabilidad.markAllAsTouched;
+}
+
+}
+
+  // crearHabilidad():void{
+  //   const hab = new Habilidades(this.tecnologia, this.porcentaje, this.color,this.imagen);
+
+  //   if (hab != undefined){
+  //     this.sHabilidad.crearHabilidad(hab).subscribe(data => {
+  //       window.location.reload();
+  //     }, err => {
+  //       alert('nuevo Habilidad agregado');
+  //       alert('recargar pagina para ver nuevo Habilidad')
+  //     })
+  //   }
  
-  }
+  // }
 
 
 

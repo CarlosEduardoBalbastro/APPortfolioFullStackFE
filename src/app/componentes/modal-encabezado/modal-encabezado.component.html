@@ -5,7 +5,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content ">
 
-        <form [formGroup]="formPersona">
+        <form [formGroup]="formPersona" (ngSubmit)="onEnviar($event)">
          
           <div class="modal-header">
       
@@ -21,7 +21,7 @@
                       <div class="input-group mb-3">
                           <label for="inputcrearNombre" class="col-sm-2 col-form-label mx-2">Nombre</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputcrearNombre" formControlName="nombre" [(ngModel)]="nombre">
+                            <input type="text" class="form-control" id="inputcrearNombre" formControlName="nombre">
                           </div>
                         </div>
   
@@ -29,7 +29,7 @@
                       <div class="input-group mb-3">
                           <label for="inputCrearApelle" class="col-sm-2 col-form-label mx-2">Apellido</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCrearApelle" formControlName="apellido" [(ngModel)]="apellido">
+                            <input type="text" class="form-control" id="inputCrearApelle" formControlName="apellido">
                           </div>
                         </div>
   
@@ -37,7 +37,7 @@
                         <div class="input-group mb-3">
                           <label for="inputCrearDomicilio" class="col-sm-2 col-form-label mx-2">Domicilio</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCrearDomicilio" formControlName="domicilio" [(ngModel)]="domicilio">
+                            <input type="text" class="form-control" id="inputCrearDomicilio" formControlName="domicilio">
                           </div>
                         </div>
   
@@ -46,14 +46,14 @@
                         <div class="input-group mb-3">
                           <label for="inputCrearNacionalidad" class="col-sm-2 col-form-label mx-2">Nacionalidad</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCrearNacionalidad" formControlName="nacionalidad" [(ngModel)]="nacionalidad">
+                            <input type="text" class="form-control" id="inputCrearNacionalidad" formControlName="nacionalidad">
                           </div>
                         </div>
   
                         <div class="input-group mb-3">
                           <label for="inputCrearLugNac" class="col-sm-2 col-form-label mx-2">Lugar Nacimiento</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCrearLugNac" formControlName="lugarNacimiento" [(ngModel)]="lugarNacimiento">
+                            <input type="text" class="form-control" id="inputCrearLugNac" formControlName="lugarNacimiento" >
                           </div>
                         </div>
   
@@ -61,7 +61,7 @@
                       <div class="input-group mb-3">
                           <label for="inputCLugRes" class="col-sm-2 col-form-label mx-2">Lugar Residencia</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCLugRes" formControlName="lugarResidencia" [(ngModel)]="lugarResidencia">
+                            <input type="text" class="form-control" id="inputCLugRes" formControlName="lugarResidencia">
                           </div>
                         </div>
   
@@ -69,7 +69,7 @@
                         <div class="input-group mb-3">
                           <label for="inputCFechNac" class="col-sm-2 col-form-label mx-2">Fecha Nacimiento</label>
                           <div class="col-sm-10 w-75">
-                            <input type="text" class="form-control" id="inputCFechNac" formControlName="fechaNac" [(ngModel)]="fechaNac">
+                            <input type="text" class="form-control" id="inputCFechNac" formControlName="fechaNac" >
                           </div>
                         </div>
   
@@ -77,7 +77,7 @@
                         <div class="input-group mb-3">
                           <label for="inputCEmail" class="col-sm-2 col-form-label mx-2">Correo Electronico</label>
                           <div class="col-sm-10 w-75">
-                            <input type="email" class="form-control" id="inputCEmail" formControlName="correo" [(ngModel)]="correo">
+                            <input type="email" class="form-control" id="inputCEmail" formControlName="correo">
                           </div>
                         </div>
   
@@ -85,19 +85,19 @@
                         <div class="input-group mb-3">
                           <label for="inputCSobremi">Sobre Mi <small>minimo 24 caracteres por ahora</small></label>
                           <div class="col-sm-10 w-100" >
-                            <textarea class="form-control" id="inputCSobremi"  aria-label="Minimo 42 caracteres" formControlName="sobreMi" [(ngModel)]="sobreMi"></textarea>
+                            <textarea class="form-control" id="inputCSobremi"  aria-label="Minimo 42 caracteres" formControlName="sobreMi"></textarea>
                           </div>
                           
                         </div>
   
   
                         <div class="input-group mb-3">
-                          <input type="file" class="form-control" id="inputGroupFileImg" formControlName="imagen" [(ngModel)]="imagen">
+                          <input type="file" class="form-control" id="inputGroupFileImg" formControlName="imagen">
                           <label class="input-group-text" for="inputGroupFileImg">Subir Imagen Perfil</label>
                         </div>
   
                         <div class="input-group mb-3">
-                          <input type="file" class="form-control" id="inputGroupFileCV" formControlName="cv" [(ngModel)]="cv">
+                          <input type="file" class="form-control" id="inputGroupFileCV" formControlName="cv" >
                           <label class="input-group-text" for="inputGroupFileCV">Subir CV PDF</label>
                         </div>
                      
@@ -106,14 +106,14 @@
                         <div class="input-group mb-3  ">
                           <label for="inputCEdad" class="col-sm-2 col-form-label mx-2">Edad</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputCEdad" formControlName="edad" [(ngModel)]="edad">
+                            <input type="text" class="form-control " id="inputCEdad" formControlName="edad" >
                           </div>
                         </div>
   
                         <div class="input-group mb-3  ">
                           <label for="inputCHijos" class="col-sm-2 col-form-label mx-2">Hijos</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputCHijos" formControlName="hijos" [(ngModel)]="hijos">
+                            <input type="text" class="form-control " id="inputCHijos" formControlName="hijos">
                           </div>
                         </div>
   
@@ -121,7 +121,7 @@
                         <div class="input-group mb-3  ">
                           <label for="inputCEstadoCivil" class="col-sm-2 col-form-label mx-2">Estado Civil</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputCEstadoCivil" formControlName="estadoCivil" [(ngModel)]="estadoCivil">
+                            <input type="text" class="form-control " id="inputCEstadoCivil" formControlName="estadoCivil">
                           </div>
                         </div>
                   
@@ -129,7 +129,7 @@
                         <div class="input-group mb-3  ">
                           <label for="inputCrearEmpresa" class="col-sm-2 col-form-label mx-2">Empresa</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputCrearEmpresa" formControlName="empresa" [(ngModel)]="empresa">
+                            <input type="text" class="form-control " id="inputCrearEmpresa" formControlName="empresa">
                           </div>
                         </div>
   
@@ -137,7 +137,7 @@
                         <div class="input-group mb-3  ">
                           <label for="inputCOcupacion" class="col-sm-2 col-form-label mx-2">Ocupacion</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputCOcupacion" formControlName="ocupacion" [(ngModel)]="ocupacion">
+                            <input type="text" class="form-control " id="inputCOcupacion" formControlName="ocupacion">
                           </div>
                         </div>
   
@@ -145,7 +145,7 @@
                         <div class="input-group mb-3  ">
                           <label for="inputCArea" class="col-sm-2 col-form-label mx-2">Area</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputCArea" formControlName="area" [(ngModel)]="area">
+                            <input type="text" class="form-control " id="inputCArea" formControlName="area">
                           </div>
                         </div>
   
@@ -162,7 +162,7 @@
     
           </div>
           <div class="modal-footer">
-              <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="onCreatePers()">Guardar</button>
+              <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal">Guardar</button>
          
             <!-- <button type="button" class="btn btn-outline-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button> -->
   

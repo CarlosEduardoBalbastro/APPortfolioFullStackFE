@@ -10,6 +10,9 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { IdiomaAddComponent } from './componentes/idioma-add/idioma-add.component';
+import { Idioma } from './model/idioma';
+import { IdiomaComponent } from './componentes/idioma/idioma.component';
 
 
 
@@ -26,6 +29,8 @@ const routes: Routes = [
    { path: "contacto", component: ContactoComponent},
    { path:"footer", component: FooterComponent},
    { path: "login", component: LoginComponent },
+  // { path: "idioma/addidioma", component: IdiomaAddComponent},
+   {path:"idioma", component: IdiomaComponent},
 
 
 

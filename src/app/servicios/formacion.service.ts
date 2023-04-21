@@ -19,20 +19,28 @@ public traerFormacion():Observable<Formacion[]>{
 
 }
 
-public crearFormacion(Forma: Formacion):Observable<any>{
-return this.httpClient.post<any>(this.url + 'crear', Forma);
+public crearFormacion(forma: Formacion):Observable<any>{
+return this.httpClient.post<any>(this.url + 'crear', forma);
 }
 
-public borrarFormacion(id:number):Observable<any>{
+public borrarFormacion(id:number):Observable<Formacion>{
 
-  return this.httpClient.delete<any>(this.url  + `borrar/${id}`);
+  return this.httpClient.delete<Formacion>(this.url  + `borrar/${id}`);
 
+}
+
+public update(forma: Formacion):Observable<any>{
+  return this.httpClient.put<any>(this.url + 'editar', forma);
 }
 
 
 public editarFormacion(id:number, Forma:Formacion):Observable<any>{
   return this.httpClient.put<any>(this.url + `editar${id}`, Forma)
 }
+
+public detail(id: number):Observable<Formacion>{
+  return this.httpClient.get<Formacion>(this.url + `ver/${id}`);
+  }
 
 
 
