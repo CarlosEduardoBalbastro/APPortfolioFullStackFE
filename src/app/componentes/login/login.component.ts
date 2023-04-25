@@ -16,7 +16,7 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class LoginComponent implements OnInit {
 
-  form: FormGroup;
+  //form: FormGroup;
   isLogged= false;
   isLogginFail=false;
   loginUsuario!: LoginUsuario;
@@ -25,9 +25,9 @@ export class LoginComponent implements OnInit {
   roles:string[]=[];
   errMsj!: string;
     // Inyectar en el constructor el formBuilder
-  constructor(private tokenService: TokenService ,private formBuilder: FormBuilder, private autentificacionService: AuthService, private router:Router) {
+  constructor(private tokenService: TokenService , private autentificacionService: AuthService, private router:Router) {
         ///Creamos el grupo de controles para el formulario de login
-        this.form= this.formBuilder.group({
+        //this.form= this.formBuilder.group({
          
           //email:['', [Validators.required, Validators.email]],
           //password:['',[Validators.required, Validators.minLength(8)]],
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
           //   deviceType: ["DEVICE_TYPE_ANDROID"],
           //   notificationToken: ["123123ececec34"]
           // })
-       })
+       //})
    }
 
   ngOnInit(): void {
@@ -103,14 +103,14 @@ if(this.tokenService.getToken()){
     
      
     
-    if (this.form.valid){
+    //if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formuario!")
-    }else{
+      //alert("Todo salio bien ¡Enviar formuario!")
+    //}else{
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
-      this.form.markAllAsTouched(); 
-    }
+      //this.form.markAllAsTouched(); 
+    //}
  
   }
 
