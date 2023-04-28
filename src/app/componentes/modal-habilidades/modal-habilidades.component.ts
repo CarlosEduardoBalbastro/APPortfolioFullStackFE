@@ -69,6 +69,7 @@ onEnviarHabilidad(event:Event){
 event.preventDefault;
 if (this.formHabilidad.valid){
   this.onCreateHab();
+  window.location.reload();
 
 }else{
   alert("Algo ha fallado en la carga");

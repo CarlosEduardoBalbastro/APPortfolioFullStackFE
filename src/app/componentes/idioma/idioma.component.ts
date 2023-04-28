@@ -14,8 +14,7 @@ import { TokenService } from 'src/app/servicios/token.service';
 export class IdiomaComponent implements OnInit {
 //componente idioma para mostrar, editar y borrar
   form: FormGroup;
- // lengua: '' = "";
-  //nivel: '' = "";
+ 
   
   
  
@@ -38,18 +37,6 @@ export class IdiomaComponent implements OnInit {
       this.isLogged=false;
     }
 
-     //const id = this.activated.snapshot.params['id'];
-
-     //this.sIdioma.detail(id).subscribe(data => {
-
-      //this.idiomas=data;
-
-    // }, err => {
-      // alert('Error al cargar los datos');
-       //this.router.navigate(['index']);
-    //}
-    
-    // )
 
    
 
@@ -79,16 +66,13 @@ borrarIdioma(id:number){
   if(id != undefined){
     this.sIdioma.borrar(id).subscribe(data =>{
       this.borrarIdioma;
+      window.location.reload();
+     
     }, err => {
       alert("actualizar la pagina para ver cambios");
     } )
   }
-  // this.sIdioma.borrar(id).subscribe(data => {
-  //   alert("recargar la pagina para ver resultados");
-  //   this.borrarIdioma;
-  //   window.location.reload();
-    
-  // })
+
   
 }
 
@@ -125,7 +109,8 @@ onEnviar(event:Event){
 
     alert('Idioma modificado');
 
-    this.router.navigate(['index']);
+    window.location.reload();
+    //this.router.navigate(['']);
 
   }else{
     alert("fallo la carga, intente nuevamente");

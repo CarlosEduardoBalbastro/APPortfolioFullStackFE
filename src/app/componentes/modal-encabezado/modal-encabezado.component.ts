@@ -145,8 +145,8 @@ event.preventDefault;
 if(this.formPersona.valid){
   this.onCreate();
   alert('Persona Agregada');
-  this.router.navigate(['index']);
-  //window.location.reload;
+  //this.router.navigate(['index']);
+  window.location.reload;
 }else{
   alert('algo fallo al crear Persona');
   this.formPersona.markAllAsTouched;

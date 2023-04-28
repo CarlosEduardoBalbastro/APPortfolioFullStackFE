@@ -27,8 +27,8 @@ export class ModalFormacionComponent implements OnInit {
 
     this.formFormacionCreate= this.formbuilder.group({
       institucion:[''],
-      imagen:[],
-      curso:[],
+      imagen:[''],
+      curso:[''],
       puntaje:[''],
       inicio:[''],
       fin:[''],
@@ -93,7 +93,7 @@ onEnviar(event:Event){
   if(this.formFormacionCreate.valid){
     this.onCreate();
     alert("Estudio agregado");
-    this.router.navigate(['index']);
+    window.location.reload();
   }else{
     alert("Hubo algun fallo en la carga");
     this.formFormacionCreate.markAllAsTouched();

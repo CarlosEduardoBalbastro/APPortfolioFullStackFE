@@ -11,8 +11,7 @@ import { IdiomaService } from 'src/app/servicios/idioma.service';
 })
 export class IdiomaAddComponent implements OnInit {
   form: FormGroup;
-  //lengua: '' = "";
-  //nivel: '' = "";
+ 
 
   idiomas: Idioma[]=[]; //sellama al modelo que es un array
 
@@ -38,7 +37,7 @@ export class IdiomaAddComponent implements OnInit {
 onCreateI():void{
 
   this.sIdioma.save(this.form.value).subscribe(data => {
-
+    
   });
   
 }
@@ -50,7 +49,8 @@ onEnviar(event:Event){
     //Metodos
     this.onCreateI();
     alert("Idioma Creado");
-    this.router.navigate(['index']);
+    window.location.reload();
+    //this.router.navigate(['']);
   }else {
     alert("algo ha fallado en la carga");
     this.form.markAllAsTouched();

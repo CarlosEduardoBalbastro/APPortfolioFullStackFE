@@ -27,13 +27,18 @@
                           </div>
                           <label for="inputEColor" class="col-sm-2 col-form-label mx-2">Color</label>
                           <div class="col-sm-10 w-75 ">
-                            <input type="text" class="form-control " id="inputEColor" formControlName="color" >
+                            <input type="text" class="form-control " id="inputEColor" formControlName="color" placeholder="green" >
                           </div>
 
-                          <label for="inputImgCHabilidades" class="col-sm-2 col-form-label mx-2">Imagen</label>
+                          <!-- <label for="inputImgCHabilidades" class="col-sm-2 col-form-label mx-2">Imagen</label>
                           <div class="col-sm-10 w-75 ">
                             <input type="text" class="form-control " id="inputImgCHabilidades" formControlName="imagen" >
-                          </div>
+                          </div> -->
+
+                           <div class="input-group mb-3">
+                              <input type="file" class="form-control" id="inputImgHabilidades" formControlName="imagen" >
+                              <label class="input-group-text" for="inputImgEHabilidades">Subir Imagen JPG</label>
+                            </div>
 
                         
 

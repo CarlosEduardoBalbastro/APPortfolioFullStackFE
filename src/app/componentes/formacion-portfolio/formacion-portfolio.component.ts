@@ -15,22 +15,15 @@ export class FormacionPortfolioComponent implements OnInit {
 
   formFormacionUD:FormGroup;
 
-  //institucion: '' = "";
-  //imagen: '' = "";
- //curso: '' = "";
- //puntaje!:number;
- //inicio: '' = "";
- // fin: '' = "";
- //horas_duracion: '' = "";
-  //miEducacion:any;
+ 
   formacion: Formacion[]=[];
   isLogged=false;
   constructor(private formBuild:FormBuilder, private sFormacion:FormacionService, private tokenService: TokenService) {
 
     this.formFormacionUD= this.formBuild.group({
       institucion:[''],
-      imagen:[],
-      curso:[],
+      imagen:[''],
+      curso:[''],
       puntaje:[''],
       inicio:[''],
       fin:[''],
@@ -47,10 +40,7 @@ export class FormacionPortfolioComponent implements OnInit {
     }else{
       this.isLogged=false;
     }
-    // this.datosPortfolio.obtenerEducacion().subscribe(data => {
-    //   console.log(data);
-    //   this.miEducacion=data.educacion;
-    // })
+   
 
   }
 
@@ -98,6 +88,7 @@ event.preventDefault;
 if(this.formFormacionUD.valid){
   this.onUpdateFormacion();
   alert('Habilidad Modificada');
+  window.location.reload();
 }else{
   alert('algo fallo al cargar');
   this.formFormacionUD.markAllAsTouched;
@@ -126,6 +117,7 @@ borrarFormacionJuli(id:number){
   if(id != undefined){
     this.sFormacion.borrarFormacion(id).subscribe(data => {
       alert("no se pudo eliminar");
+      window.location.reload();
     }, error => {
       alert("Experiencia eliminada con éxito");
       this.traerFormacion();

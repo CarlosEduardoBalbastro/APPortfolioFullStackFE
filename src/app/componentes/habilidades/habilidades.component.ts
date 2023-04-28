@@ -61,7 +61,7 @@ export class HabilidadesComponent implements OnInit {
       fin: [''],
       descripcion: [''], 
       direccion: [''],
-      imagen: [''],
+      imagenExp: [''],
       stackusado: ['']
     })
 
@@ -130,7 +130,8 @@ onEnviarHab(event:Event){
   if (this.formHabilidadUD.valid){
     this.onUpdateHab();
     alert("Habilidad Modificada");
-    this.router.navigate(['index']);
+    // this.router.navigate(['']);
+    window.location.reload();
   }else{
     alert("Algo Falló al cargar");
     this.formHabilidadUD.markAllAsTouched;
@@ -143,8 +144,10 @@ onEnviarHab(event:Event){
     if(id != undefined){
       this.sHabilidad.eliminarHabilidad(id).subscribe(data => {
         this.borrarHabilidad;
+       
       }, err => {
         alert("habilidad eliminada, actualizar para ver cambios");
+        window.location.reload();
       })
     }
  
@@ -185,7 +188,7 @@ get Descripcion(){
  }   
 
  get Imagen (){
-  return this.formExperienciaUD.get("imagen");
+  return this.formExperienciaUD.get("imagenExp");
  }
 
 
@@ -208,7 +211,7 @@ onEnviarExp(event:Event){
   if (this.formExperienciaUD.valid){
     this.onUpdateExp();
     alert("Experiencia Modificada");
-    this.router.navigate(['index']);
+    window.location.reload();
   }else{
     alert("Algo Falló al cargar");
     this.formExperienciaUD.markAllAsTouched;
@@ -230,6 +233,7 @@ onEnviarExp(event:Event){
         this.borrarExperiencia;
       }, err => {
         alert("Experiencia eliminada, actualizar para ver cambios");
+        window.location.reload();
       })
     }
   }

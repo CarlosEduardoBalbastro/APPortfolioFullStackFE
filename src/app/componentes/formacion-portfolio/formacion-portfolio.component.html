@@ -54,49 +54,7 @@
     </div>
 
 
-    
-
-
-    <!-- modal eliminar formacion -->
-  <!-- <div class="modal fade" id="eliminarFormacion" aria-hidden="true" aria-labelledby="modalToggleEliminarFormacion" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header ">
-          <h1 class="modal-title fs-5" id="modalToggleEliminarFormacion">Eliminar</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ¿Seguro Desea Eliminar?
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-danger" type="submit"  data-bs-dismiss="modal" aria-label="Close" >Eliminar</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
- 
- <!-- Modal -->
-    
-  <!-- <div class="modal fade" id="imgCertificados"  tabindex="-1" aria-labelledby="imgCertificadoModalLabel" aria-hidden="true">
-            
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-title" id="imgCertificadoModalLabel">{{educacion.fin}}</div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
-        </div>
-
-     
-
-        <div class="modal-body w-100">
-          <img [src]="educacion.imagen" class="img-fluid mx-auto d-block w-100" alt="Certificados">
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
+  
 
   <!-- editar formacion -->
   <div class="modal fade" id="editarFormacion" tabindex="-1" aria-labelledby="mumukiModalLabel" aria-hidden="true">
@@ -125,7 +83,7 @@
   
   
                         <div class="input-group mb-3">
-                          <input type="file" class="form-control" id="inputGroupFile02">
+                          <input type="file" class="form-control" id="inputGroupFile02" formControlName="imagen" >
                           <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
                         </div>
   
@@ -193,7 +151,7 @@
           <div class="modal-footer">
               <button type="submit" class="btn btn-outline-success ">Guardar</button>
          
-            <!-- <button type="button" class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Eliminar</button> -->
+       
   
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
           </div>
