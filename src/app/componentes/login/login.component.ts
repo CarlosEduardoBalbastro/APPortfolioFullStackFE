@@ -26,17 +26,7 @@ export class LoginComponent implements OnInit {
   errMsj!: string;
     // Inyectar en el constructor el formBuilder
   constructor(private tokenService: TokenService , private autentificacionService: AuthService, private router:Router) {
-        ///Creamos el grupo de controles para el formulario de login
-        //this.form= this.formBuilder.group({
-         
-          //email:['', [Validators.required, Validators.email]],
-          //password:['',[Validators.required, Validators.minLength(8)]],
-          // deviceInfo:this.formBuilder.group({
-          //   deviceId: ["123123"],
-          //   deviceType: ["DEVICE_TYPE_ANDROID"],
-          //   notificationToken: ["123123ececec34"]
-          // })
-       //})
+     
    }
 
   ngOnInit(): void {

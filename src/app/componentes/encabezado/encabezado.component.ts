@@ -183,6 +183,7 @@ onEnviar(event:Event){
   if(this.formPersonaUD.valid){
     this.onUpdatePersona();
     alert('Persona Modificada');
+    window.location.reload();
   }else{
     alert('algo fallo al cargar');
     this.formPersonaUD.markAllAsTouched;
