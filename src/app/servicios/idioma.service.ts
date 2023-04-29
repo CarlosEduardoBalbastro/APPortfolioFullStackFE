@@ -8,7 +8,7 @@ import { Idioma } from '../model/idioma';
 })
 export class IdiomaService {
 
-  url = 'http://localhost:8080/idiomas/';
+  url = 'https://apportfoliofullstackbe-production.up.railway.app/idiomas/';
 
 
   constructor(private httpClient:HttpClient) { }

@@ -13,7 +13,7 @@ import { Habilidades } from '../model/habilidades';
 export class HabilidadService {
 
 
-   url = "http://localhost:8080/habilidades/";
+   url = "https://apportfoliofullstackbe-production.up.railway.app/habilidades/";
 
   constructor(private httpClient:HttpClient) { }
 
