@@ -11,8 +11,8 @@ import { LoginUsuario } from '../model/login-usuario';
 export class AuthService {
 
 
-  //authUrl = 'https://web-production-a79e.up.railway.app/auth/';
-  authUrl = "http://localhost:8080/auth/";
+  
+  authUrl = "https://apportfoliofullstackbe-production.up.railway.app/auth/";
 
   constructor(private httpClient: HttpClient) { }
 

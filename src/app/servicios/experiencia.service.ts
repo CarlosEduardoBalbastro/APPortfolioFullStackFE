@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class ExperienciaService {
 
-  url = 'http://localhost:8080/experiencias/'
+  url = 'https://apportfoliofullstackbe-production.up.railway.app/experiencias/'
 
   constructor(private httpClient:HttpClient) { }
 

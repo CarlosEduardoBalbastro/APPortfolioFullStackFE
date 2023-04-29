@@ -8,7 +8,7 @@ import { Formacion } from '../model/formacion';
 })
 export class FormacionService {
 
-  url = "http://localhost:8080/formacion/"
+  url = "https://apportfoliofullstackbe-production.up.railway.app/formacion/"
 
   constructor(private httpClient:HttpClient) { }
 
